@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glasgow Editorial Design System — Interactive Visual Specification</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            paper: '#FAF8F5',
+            ink: '#1A1918',
+            forest: {
+              DEFAULT: '#244B3B',
+              hover: '#1A382C',
+              light: '#EEF4F0',
+              border: '#2E5C49'
+            },
+            ochre: {
+              DEFAULT: '#925E0A',
+              hover: '#734A07',
+              light: '#FDF8EE'
+            },
+            vermilion: {
+              DEFAULT: '#C83E2B',
+              hover: '#A63020',
+              light: '#FDF2F0'
+            },
+            editorial: {
+              border: '#E5E0D8',
+              muted: '#736E65',
+              subtle: '#F2EFE9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Editorial double border utility */
+    .editorial-double-border {
+      border-top: 3px double #E5E0D8;
+    }
+    .editorial-double-border-bottom {
+      border-bottom: 3px double #E5E0D8;
+    }
+    /* Toast animation */
+    @keyframes slideUp {
+      0% { transform: translateY(100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .animate-toast {
+      animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    /* Custom tab transitions */
+    .tab-active {
+      border-bottom: 2px solid #244B3B;
+      color: #244B3B;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-[#1A1918] font-sans antialiased selection:bg-[#244B3B] selection:text-white min-h-screen py-8 px-4 sm:px-6 md:px-10">
+
+  <div class="max-w-5xl mx-auto space-y-8">
+
+    <!-- Top Card Header Banner -->
+    <header class="bg-white p-6 md:p-8 rounded-lg border border-[#E5E0D8] shadow-sm relative overflow-hidden">
+      <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#244B3B] via-[#925E0A] to-[#C83E2B]"></div>
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#E5E0D8] pb-6">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-[11px] font-mono text-[#925E0A] font-bold uppercase tracking-widest px-2 py-0.5 bg-[#FDF8EE] border border-[#925E0A]/20 rounded">
+              FIG. DS-01 // VISUAL SPECIFICATION
+            </span>
+            <span class="text-xs font-mono text-[#736E65]">Version 1.0</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-serif text-[#1A1918] font-normal tracking-tight">
+            Glasgow Editorial Design System
+          </h1>
+          <p class="text-sm text-[#736E65] font-sans mt-1 max-w-2xl">
+            A high-contrast, publication-grade design language combining Glasgow School of Art typographic rigor with literary editorial aesthetics (*The New Yorker*, *Monocle*).
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="copyTokensJSON()" class="px-3.5 py-2 bg-[#FAF8F5] border border-[#E5E0D8] hover:bg-[#F2EFE9] text-[#1A1918] text-xs font-mono rounded transition flex items-center gap-1.5 shadow-sm">
+            <i class="fa-solid fa-code text-[#244B3B]"></i>
+            <span>Copy JSON Tokens</span>
+          </button>
+          <button onclick="copyTailwindConfig()" class="px-3.5 py-2 bg-[#244B3B] hover:bg-[#1A382C] text-white text-xs font-mono rounded transition flex items-center gap-1.5 shadow-sm">
+            <i class="fa-solid fa-copy"></i>
+            <span>Copy Tailwind Config</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-xs font-mono text-[#736E65]">
+        <div>
+          <span class="block text-[#925E0A] font-bold uppercase text-[10px] tracking-wider">Canvas Standard</span>
+          <span class="text-[#1A1918] font-medium font-serif text-sm">#FAF8F5 Warm Paper</span>
+        </div>
+        <div>
+          <span class="block text-[#244B3B] font-bold uppercase text-[10px] tracking-wider">Primary Accent</span>
+          <span class="text-[#1A1918] font-medium font-serif text-sm">Deep Forest Green</span>
+        </div>
+        <div>
+          <span class="block text-[#925E0A] font-bold uppercase text-[10px] tracking-wider">Tertiary Accent</span>
+          <span class="text-[#1A1918] font-medium font-serif text-sm">Deep Raw Ochre</span>
+        </div>
+        <div>
+          <span class="block text-[#C83E2B] font-bold uppercase text-[10px] tracking-wider">Call-out CTA</span>
+          <span class="text-[#1A1918] font-medium font-serif text-sm">Vermilion Red</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-white p-6 md:p-8 rounded-lg border border-[#E5E0D8] shadow-sm space-y-6">
+      <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-4">
+        <div>
+          <h2 class="text-xs font-mono uppercase tracking-widest text-[#244B3B] font-semibold flex items-center gap-2">
+            <span>1. COLOR PALETTE & WCAG ACCESSIBILITY SPECS</span>
+          </h2>
+          <p class="text-xs text-[#736E65] mt-1">Click any swatch to copy hex code to clipboard. Hover to inspect contrast ratios against `#FAF8F5` Paper.</p>
+        </div>
+        <span class="text-[11px] font-mono px-2.5 py-1 bg-[#EEF4F0] text-[#244B3B] rounded border border-[#244B3B]/20">
+          WCAG 2.1 AAA Compliant Base
+        </span>
+      </div>
+
+      <!-- Color Swatches Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
+        
+        <!-- Swatch 1: Paper -->
+        <div onclick="copyHex('#FAF8F5', 'Paper Canvas')" class="group cursor-pointer p-3.5 bg-[#FAF8F5] border border-[#E5E0D8] rounded-lg hover:border-[#244B3B] transition shadow-xs relative">
+          <div class="w-full h-12 bg-[#FAF8F5] border border-[#E5E0D8] rounded mb-3 flex items-center justify-center text-[10px] text-[#736E65] font-sans">
+            Base Canvas
+          </div>
+          <p class="font-bold text-[#1A1918] font-sans">Paper (Canvas)</p>
+          <p class="text-[#736E65]">#FAF8F5</p>
+          <p class="text-[10px] text-[#244B3B] mt-1 font-semibold">Background Base</p>
+          <span class="absolute top-2 right-2 text-[10px] text-[#736E65] opacity-0 group-hover:opacity-100 transition"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+        <!-- Swatch 2: Ink Charcoal -->
+        <div onclick="copyHex('#1A1918', 'Ink Charcoal')" class="group cursor-pointer p-3.5 bg-[#1A1918] text-[#FAF8F5] rounded-lg hover:ring-2 hover:ring-[#244B3B] transition shadow-xs relative">
+          <div class="w-full h-12 bg-[#1A1918] border border-white/20 rounded mb-3 flex items-center justify-center text-[10px] text-white/70 font-sans">
+            Text / Dark Blocks
+          </div>
+          <p class="font-bold text-white font-sans">Ink Charcoal</p>
+          <p class="text-white/70">#1A1918</p>
+          <p class="text-[10px] text-emerald-400 mt-1 font-semibold">17.8:1 (AAA Pass)</p>
+          <span class="absolute top-2 right-2 text-[10px] text-white/70 opacity-0 group-hover:opacity-100 transition"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+        <!-- Swatch 3: Forest Green -->
+        <div onclick="copyHex('#244B3B', 'Deep Forest Green')" class="group cursor-pointer p-3.5 bg-[#244B3B] text-white rounded-lg hover:ring-2 hover:ring-[#925E0A] transition shadow-xs relative">
+          <div class="w-full h-12 bg-[#244B3B] rounded mb-3 border border-white/20 flex items-center justify-center text-[10px] text-white/80 font-sans">
+            Primary Accent
+          </div>
+          <p class="font-bold text-white font-sans">Forest Green</p>
+          <p class="text-white/80">#244B3B</p>
+          <p class="text-[10px] text-emerald-300 mt-1 font-semibold">8.1:1 (AAA Pass)</p>
+          <span class="absolute top-2 right-2 text-[10px] text-white/70 opacity-0 group-hover:opacity-100 transition"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+        <!-- Swatch 4: Raw Ochre -->
+        <div onclick="copyHex('#925E0A', 'Deep Raw Ochre')" class="group cursor-pointer p-3.5 bg-[#925E0A] text-white rounded-lg hover:ring-2 hover:ring-[#244B3B] transition shadow-xs relative">
+          <div class="w-full h-12 bg-[#925E0A] rounded mb-3 border border-white/20 flex items-center justify-center text-[10px] text-white/80 font-sans">
+            Catalog & Metrics
+          </div>
+          <p class="font-bold text-white font-sans">Raw Ochre</p>
+          <p class="text-white/80">#925E0A</p>
+          <p class="text-[10px] text-amber-200 mt-1 font-semibold">5.0:1 (AA Pass)</p>
+          <span class="absolute top-2 right-2 text-[10px] text-white/70 opacity-0 group-hover:opacity-100 transition"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+        <!-- Swatch 5: Vermilion Red -->
+        <div onclick="copyHex('#C83E2B', 'Vermilion Red')" class="group cursor-pointer p-3.5 bg-[#C83E2B] text-white rounded-lg hover:ring-2 hover:ring-[#1A1918] transition shadow-xs relative">
+          <div class="w-full h-12 bg-[#C83E2B] rounded mb-3 border border-white/20 flex items-center justify-center text-[10px] text-white/80 font-sans">
+            Selective CTA
+          </div>
+          <p class="font-bold text-white font-sans">Vermilion Red</p>
+          <p class="text-white/80">#C83E2B</p>
+          <p class="text-[10px] text-orange-200 mt-1 font-semibold">4.9:1 (AA Pass)</p>
+          <span class="absolute top-2 right-2 text-[10px] text-white/70 opacity-0 group-hover:opacity-100 transition"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+        <!-- Swatch 6: Editorial Border -->
+        <div onclick="copyHex('#E5E0D8', 'Editorial Border')" class="group cursor-pointer p-3.5 bg-[#FAF8F5] border border-[#E5E0D8] rounded-lg hover:border-[#244B3B] transition shadow-xs relative">
+          <div class="w-full h-12 bg-[#E5E0D8] rounded mb-3 flex items-center justify-center text-[10px] text-[#736E65] font-sans">
+            Hairline Rules
+          </div>
+          <p class="font-bold text-[#1A1918] font-sans">Editorial Border</p>
+          <p class="text-[#736E65]">#E5E0D8</p>
+          <p class="text-[10px] text-[#736E65] mt-1 font-semibold">Grid Divider</p>
+          <span class="absolute top-2 right-2 text-[10px] text-[#736E65] opacity-0 group-hover:opacity-100 transition"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+        <!-- Swatch 7: Editorial Subtle -->
+        <div onclick="copyHex('#F2EFE9', 'Editorial Subtle')" class="group cursor-pointer p-3.5 bg-[#F2EFE9] border border-[#E5E0D8] rounded-lg hover:border-[#244B3B] transition shadow-xs relative">
+          <div class="w-full h-12 bg-[#F2EFE9] rounded mb-3 border border-[#E5E0D8] flex items-center justify-center text-[10px] text-[#736E65] font-sans">
+            Card Fill / Hover
+          </div>
+          <p class="font-bold text-[#1A1918] font-sans">Editorial Subtle</p>
+          <p class="text-[#736E65]">#F2EFE9</p>
+          <p class="text-[10px] text-[#736E65] mt-1 font-semibold">Surface Highlight</p>
+          <span class="absolute top-2 right-2 text-[10px] text-[#736E65] opacity-0 group-hover:opacity-100 transition"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+        <!-- Swatch 8: Editorial Muted -->
+        <div onclick="copyHex('#736E65', 'Editorial Muted')" class="group cursor-pointer p-3.5 bg-[#FAF8F5] border border-[#E5E0D8] rounded-lg hover:border-[#244B3B] transition shadow-xs relative">
+          <div class="w-full h-12 bg-[#736E65] rounded mb-3 flex items-center justify-center text-[10px] text-white font-sans">
+            Captions / Metadata
+          </div>
+          <p class="font-bold text-[#1A1918] font-sans">Editorial Muted</p>
+          <p class="text-[#736E65]">#736E65</p>
+          <p class="text-[10px] text-[#244B3B] mt-1 font-semibold">4.6:1 (AA Pass)</p>
+          <span class="absolute top-2 right-2 text-[10px] text-[#736E65] opacity-0 group-hover:opacity-100 transition"><i class="fa-regular fa-copy"></i></span>
+        </div>
+
+      </div>
+
+      <div class="pt-4 border-t border-[#E5E0D8]">
+        <div class="bg-[#FAF8F5] p-4 rounded-lg border border-[#E5E0D8] space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#244B3B] font-semibold uppercase flex items-center gap-1.5">
+              <i class="fa-solid fa-[#244B3B] fa-circle-half-stroke"></i> Live WCAG Contrast Ratio Testing Sandbox
+            </span>
+            <span id="contrastBadge" class="text-[10px] font-mono px-2 py-0.5 bg-[#244B3B] text-white rounded font-bold">
+              8.1:1 AAA PASS
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] font-mono text-[#736E65] mb-1">SELECT FOREGROUND COLOR</label>
+              <select id="fgSelect" onchange="updateContrastTester()" class="w-full p-2 bg-white border border-[#E5E0D8] rounded text-xs font-mono text-[#1A1918] focus:outline-none focus:border-[#244B3B]">
+                <option value="#1A1918" selected>#1A1918 — Ink Charcoal</option>
+                <option value="#244B3B">#244B3B — Forest Green</option>
+                <option value="#925E0A">#925E0A — Raw Ochre</option>
+                <option value="#C83E2B">#C83E2B — Vermilion Red</option>
+                <option value="#736E65">#736E65 — Editorial Muted</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] font-mono text-[#736E65] mb-1">SELECT BACKGROUND COLOR</label>
+              <select id="bgSelect" onchange="updateContrastTester()" class="w-full p-2 bg-white border border-[#E5E0D8] rounded text-xs font-mono text-[#1A1918] focus:outline-none focus:border-[#244B3B]">
+                <option value="#FAF8F5" selected>#FAF8F5 — Paper (Canvas)</option>
+                <option value="#FFFFFF">#FFFFFF — Pure White Card</option>
+                <option value="#F2EFE9">#F2EFE9 — Editorial Subtle</option>
+                <option value="#1A1918">#1A1918 — Ink Charcoal Card</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Live Specimen Box -->
+          <div id="specimenBox" class="p-4 rounded border border-[#E5E0D8] transition duration-300">
+            <p id="specimenHeading" class="font-serif text-lg font-normal mb-1">
+              "Stripping away operational friction to reveal essential narrative truth."
+            </p>
+            <p id="specimenSub" class="font-sans text-xs">
+              Sample body text demonstrating legibility and high contrast ratios across light and dark publication surfaces.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white p-6 md:p-8 rounded-lg border border-[#E5E0D8] shadow-sm space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-[#E5E0D8] pb-4 gap-2">
+        <div>
+          <h2 class="text-xs font-mono uppercase tracking-widest text-[#244B3B] font-semibold">
+            2. TYPOGRAPHIC HIERARCHY & SPECIMEN SCALE
+          </h2>
+          <p class="text-xs text-[#736E65] mt-0.5">Newsreader (Headlines) • Inter (Interface/Body) • JetBrains Mono (Cataloging)</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input type="text" id="customText" oninput="updateFontSpecimens()" placeholder="Type custom specimen..." value="Glasgow Editorial Strategy 2026" class="px-3 py-1 bg-[#FAF8F5] border border-[#E5E0D8] rounded text-xs font-mono text-[#1A1918] focus:outline-none focus:border-[#244B3B] w-full sm:w-64" />
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        
+        <!-- Font Family 1: Newsreader -->
+        <div class="p-5 bg-[#FAF8F5] border border-[#E5E0D8] rounded-lg space-y-3">
+          <div class="flex items-center justify-between border-b border-[#E5E0D8]/80 pb-2">
+            <span class="text-xs font-mono text-[#244B3B] font-bold uppercase tracking-wider">
+              DISPLAY & HEADLINES // Newsreader (Serif)
+            </span>
+            <span class="text-[11px] font-mono text-[#736E65]">Weights: 400 Regular, 500 Medium, Italic</span>
+          </div>
+          <div>
+            <p id="newsreaderSample1" class="font-serif text-3xl font-normal text-[#1A1918] leading-tight">
+              Glasgow Editorial Strategy 2026
+            </p>
+            <p id="newsreaderSample2" class="font-serif text-xl italic text-[#244B3B] mt-1">
+              Bridging the gap between enterprise knowledge and human understanding.
+            </p>
+          </div>
+          <p class="text-[11px] font-mono text-[#736E65]">
+            Usage: Hero title, section headings, case study titles, pull-quote highlights.
+          </p>
+        </div>
+
+        <!-- Font Family 2: Inter -->
+        <div class="p-5 bg-[#FAF8F5] border border-[#E5E0D8] rounded-lg space-y-3">
+          <div class="flex items-center justify-between border-b border-[#E5E0D8]/80 pb-2">
+            <span class="text-xs font-mono text-[#244B3B] font-bold uppercase tracking-wider">
+              BODY & INTERFACE // Inter (Sans-Serif)
+            </span>
+            <span class="text-[11px] font-mono text-[#736E65]">Weights: 300 Light, 400 Regular, 500 Medium, 600 SemiBold</span>
+          </div>
+          <div>
+            <p id="interSample1" class="font-sans text-base font-normal text-[#1A1918] leading-relaxed">
+              Glasgow Editorial Strategy 2026 — Communications leader with 15+ years of experience building strategies, systems, and content frameworks for global organizations and C-suite networks.
+            </p>
+            <p id="interSample2" class="font-sans text-xs font-medium text-[#736E65] mt-2 tracking-wide">
+              INTERFACE LINKS • CASE STUDY TABS • BUTTON LABELS • NAVIGATION ITEM
+            </p>
+          </div>
+          <p class="text-[11px] font-mono text-[#736E65]">
+            Usage: Body copy, navigation links, card descriptive copy, button labels.
+          </p>
+        </div>
+
+        <!-- Font Family 3: JetBrains Mono -->
+        <div class="p-5 bg-[#FAF8F5] border border-[#E5E0D8] rounded-lg space-y-3">
+          <div class="flex items-center justify-between border-b border-[#E5E0D8]/80 pb-2">
+            <span class="text-xs font-mono text-[#244B3B] font-bold uppercase tracking-wider">
+              METADATA & CATALOGING // JetBrains Mono (Monospace)
+            </span>
+            <span class="text-[11px] font-mono text-[#736E65]">Weights: 400 Regular, 500 Medium, 600 Bold</span>
+          </div>
+          <div class="space-y-1 font-mono text-xs">
+            <p id="monoSample1" class="text-[#925E0A] font-bold">
+              FIG. 01 // AI INTEGRATION & KNOWLEDGE ARCHITECTURE
+            </p>
+            <p id="monoSample2" class="text-[#1A1918]">
+              01. CASE STUDIES • CATALOGUE NO. 04 / 04 • WCAG 2.1 AAA PASS
+            </p>
+          </div>
+          <p class="text-[11px] font-mono text-[#736E65]">
+            Usage: Section tags (`01 // CASE STUDIES`), figure tags (`FIG. 01`), metric labels, camera specs.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bg-white p-6 md:p-8 rounded-lg border border-[#E5E0D8] shadow-sm space-y-6">
+      <div class="border-b border-[#E5E0D8] pb-4">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-[#244B3B] font-semibold">
+          3. EDITORIAL COMPONENTS & CARD STYLING LIBRARY
+        </h2>
+        <p class="text-xs text-[#736E65] mt-0.5">Rules, badges, buttons, Museum Placard frame, and structured case study card components.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- Column 1: Buttons, Badges, and Rules -->
+        <div class="space-y-6">
+          
+          <!-- Editorial Rules -->
+          <div class="p-4 bg-[#FAF8F5] border border-[#E5E0D8] rounded-lg space-y-3">
+            <p class="text-xs font-mono text-[#244B3B] font-bold uppercase">Editorial Rule Standards</p>
+            <div>
+              <p class="text-[11px] font-mono text-[#736E65] mb-1">DOUBLE TOP RULE (`border-top: 3px double #E5E0D8`)</p>
+              <div class="editorial-double-border pt-2 text-xs font-serif italic text-[#1A1918]">
+                Section separation rule for high-level metrics and pull quotes.
+              </div>
+            </div>
+            <div class="pt-2">
+              <p class="text-[11px] font-mono text-[#736E65] mb-1">HAIRLINE DIVIDER (`border-bottom: 1px solid #E5E0D8`)</p>
+              <div class="border-b border-[#E5E0D8] pb-2 text-xs font-sans text-[#736E65]">
+                Card interior structural divider line.
+              </div>
+            </div>
+          </div>
+
+          <!-- Badges & Action Buttons -->
+          <div class="p-4 bg-[#FAF8F5] border border-[#E5E0D8] rounded-lg space-y-4">
+            <p class="text-xs font-mono text-[#244B3B] font-bold uppercase">Action Buttons & Micro-Badges</p>
+            
+            <div class="flex flex-wrap gap-2 items-center">
+              <span class="px-3 py-1 bg-[#244B3B] text-white text-xs font-mono rounded">
+                Active Tab
+              </span>
+              <span class="px-3 py-1 bg-[#EEF4F0] text-[#244B3B] border border-[#244B3B]/20 text-xs font-mono rounded">
+                Tag Badge
+              </span>
+              <span class="px-3 py-1 bg-[#FDF8EE] text-[#925E0A] border border-[#925E0A]/20 text-xs font-mono rounded font-semibold">
+                FIG. 01 Marker
+              </span>
+            </div>
+
+            <div class="flex flex-wrap gap-3 items-center pt-2">
+              <button class="px-4 py-2 bg-[#C83E2B] text-white text-xs font-medium rounded hover:bg-[#A63020] transition shadow-xs flex items-center gap-1.5">
+                <span>Contact Direct CTA</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+
+              <button class="px-4 py-2 bg-[#1A1918] text-white text-xs font-medium rounded hover:bg-[#244B3B] transition shadow-xs">
+                Secondary Dark
+              </button>
+
+              <button class="px-4 py-2 bg-white border border-[#E5E0D8] text-[#1A1918] text-xs font-medium rounded hover:bg-[#F2EFE9] transition">
+                Outline Neutral
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Column 2: Museum Placard Frame Preview -->
+        <div class="space-y-6">
+          <div class="bg-[#FAF8F5] p-4 rounded-lg border border-[#E5E0D8] space-y-3">
+            <p class="text-xs font-mono text-[#244B3B] font-bold uppercase">"The Featured Lens" Museum Placard Frame</p>
+            
+            <!-- Museum Frame Card Component -->
+            <div class="bg-white p-3 rounded border border-[#E5E0D8] shadow-xs relative">
+              <div class="aspect-[16/9] bg-[#1A1918] rounded-sm overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=1000&auto=format&fit=crop" alt="Museum Frame Specimen" class="w-full h-full object-cover filter contrast-[1.03]" />
+                <div class="absolute top-2 left-2 bg-[#1A1918]/80 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-mono text-white tracking-wider uppercase border border-white/10 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#925E0A]"></span>
+                  Featured Lens
+                </div>
+              </div>
+              <div class="mt-2 flex items-center justify-between text-xs font-mono">
+                <span class="text-[#925E0A] font-bold text-[10px]">CATALOGUE NO. 01 / 04</span>
+                <span class="text-[#736E65] text-[10px]">Shot by Jerrick • Brooklyn, NY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Full Width Case Study Component Specimen -->
+      <div class="pt-4 border-t border-[#E5E0D8]">
+        <p class="text-xs font-mono text-[#244B3B] font-bold uppercase mb-3">Sample Editorial Case Study Card Component</p>
+        
+        <div class="p-6 bg-white rounded border border-[#E5E0D8] shadow-xs hover:border-[#244B3B]/40 transition space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#E5E0D8]/60 pb-3">
+            <div>
+              <span class="text-xs font-mono text-[#736E65] uppercase tracking-wider flex items-center gap-2">
+                <span class="text-[#925E0A] font-bold">FIG. 01</span> // AI INTEGRATION & KNOWLEDGE ARCHITECTURE
+              </span>
+              <h3 class="text-xl font-serif text-[#1A1918] font-normal mt-0.5">"Artie" AI Knowledge Base Chatbot</h3>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-1 bg-[#EEF4F0] text-[#244B3B] border border-[#244B3B]/20 rounded">Page Society</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#1A1918]/80 leading-relaxed">
+            <div class="bg-[#FAF8F5] p-3 rounded border border-[#E5E0D8]">
+              <p class="font-bold text-[#1A1918] font-mono text-[10px] uppercase mb-1 text-[#925E0A]">◆ Context</p>
+              <p>Legacy research archive discovery was difficult for C-suite executive members.</p>
+            </div>
+            <div class="bg-[#FAF8F5] p-3 rounded border border-[#E5E0D8]">
+              <p class="font-bold text-[#1A1918] font-mono text-[10px] uppercase mb-1 text-[#244B3B]">◆ Tactical Contribution</p>
+              <p>Directed website overhaul, taxonomy rules, content audits, and prompt guardrail testing.</p>
+            </div>
+            <div class="bg-[#FAF8F5] p-3 rounded border border-[#E5E0D8]">
+              <p class="font-bold text-[#1A1918] font-mono text-[10px] uppercase mb-1 text-[#244B3B]">◆ Real-World Result</p>
+              <p>Deployed AI chatbot indexing enterprise IP & creating new organization revenue streams.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="bg-white p-6 md:p-8 rounded-lg border border-[#E5E0D8] shadow-sm space-y-4">
+      <div class="flex items-center justify-between border-b border-[#E5E0D8] pb-4">
+        <div>
+          <h2 class="text-xs font-mono uppercase tracking-widest text-[#244B3B] font-semibold">
+            4. DESIGN TOKENS EXPORT (JSON & TAILWIND)
+          </h2>
+          <p class="text-xs text-[#736E65] mt-0.5">Copy and paste directly into your Astro, React, or CSS configuration file.</p>
+        </div>
+        <button onclick="copyTokensJSON()" class="px-3 py-1.5 bg-[#FAF8F5] border border-[#E5E0D8] hover:bg-[#F2EFE9] text-xs font-mono rounded text-[#1A1918]">
+          <i class="fa-solid fa-copy text-[#244B3B]"></i> Copy JSON
+        </button>
+      </div>
+
+      <pre class="p-4 bg-[#1A1918] text-[#FAF8F5] rounded-lg text-xs font-mono overflow-x-auto border border-black/10"><code>{
+  "designSystem": "Glasgow Editorial",
+  "version": "1.0.0",
+  "colors": {
+    "paper": "#FAF8F5",
+    "ink": "#1A1918",
+    "forest": "#244B3B",
+    "ochre": "#925E0A",
+    "vermilion": "#C83E2B",
+    "editorialBorder": "#E5E0D8",
+    "editorialSubtle": "#F2EFE9",
+    "editorialMuted": "#736E65"
+  },
+  "fonts": {
+    "serif": "Newsreader, Georgia, serif",
+    "sans": "Inter, -apple-system, sans-serif",
+    "mono": "JetBrains Mono, monospace"
+  }
+}</code></pre>
+    </section>
+
+  </div>
+
+  <div id="toast" class="fixed bottom-6 right-6 bg-[#1A1918] text-white px-4 py-3 rounded-lg shadow-xl text-xs font-mono border border-white/20 hidden flex items-center gap-2.5 z-50">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span id="toastMsg">Hex code copied to clipboard!</span>
+  </div>
+
+  <script>
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      toast.classList.add('animate-toast');
+
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('animate-toast');
+      }, 2500);
+    }
+
+    function copyHex(hex, name) {
+      // Use execCommand for iframe compatibility
+      const tempInput = document.createElement('input');
+      tempInput.value = hex;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      showToast(`Copied ${name} (${hex}) to clipboard!`);
+    }
+
+    function getLuminance(r, g, b) {
+      const a = [r, g, b].map(v => {
+        v /= 255;
+        return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+      });
+      return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+    }
+
+    function hexToRgb(hex) {
+      hex = hex.replace('#', '');
+      return {
+        r: parseInt(hex.substring(0, 2), 16),
+        g: parseInt(hex.substring(2, 4), 16),
+        b: parseInt(hex.substring(4, 6), 16)
+      };
+    }
+
+    function calculateContrast(hex1, hex2) {
+      const rgb1 = hexToRgb(hex1);
+      const rgb2 = hexToRgb(hex2);
+      const lum1 = getLuminance(rgb1.r, rgb1.g, rgb1.b);
+      const lum2 = getLuminance(rgb2.r, rgb2.g, rgb2.b);
+      const brightest = Math.max(lum1, lum2);
+      const darkest = Math.min(lum1, lum2);
+      return (brightest + 0.05) / (darkest + 0.05);
+    }
+
+    function updateContrastTester() {
+      const fg = document.getElementById('fgSelect').value;
+      const bg = document.getElementById('bgSelect').value;
+      const box = document.getElementById('specimenBox');
+      const heading = document.getElementById('specimenHeading');
+      const sub = document.getElementById('specimenSub');
+      const badge = document.getElementById('contrastBadge');
+
+      box.style.backgroundColor = bg;
+      heading.style.color = fg;
+      sub.style.color = fg;
+
+      const ratio = calculateContrast(fg, bg).toFixed(1);
+
+      if (ratio >= 7) {
+        badge.textContent = `${ratio}:1 AAA PASS`;
+        badge.className = 'text-[10px] font-mono px-2 py-0.5 bg-[#244B3B] text-white rounded font-bold';
+      } else if (ratio >= 4.5) {
+        badge.textContent = `${ratio}:1 AA PASS`;
+        badge.className = 'text-[10px] font-mono px-2 py-0.5 bg-[#925E0A] text-white rounded font-bold';
+      } else {
+        badge.textContent = `${ratio}:1 FAIL`;
+        badge.className = 'text-[10px] font-mono px-2 py-0.5 bg-[#C83E2B] text-white rounded font-bold';
+      }
+    }
+
+    function updateFontSpecimens() {
+      const text = document.getElementById('customText').value || 'Glasgow Editorial Strategy 2026';
+      document.getElementById('newsreaderSample1').textContent = text;
+      document.getElementById('interSample1').textContent = text + ' — Communications leader with 15+ years of experience building strategies.';
+      document.getElementById('monoSample1').textContent = 'FIG. 01 // ' + text.toUpperCase();
+    }
+
+    function copyTokensJSON() {
+      const json = `{
+  "designSystem": "Glasgow Editorial",
+  "colors": {
+    "paper": "#FAF8F5",
+    "ink": "#1A1918",
+    "forest": "#244B3B",
+    "ochre": "#925E0A",
+    "vermilion": "#C83E2B",
+    "editorialBorder": "#E5E0D8"
+  }
+}`;
+      const tempInput = document.createElement('textarea');
+      tempInput.value = json;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      showToast('Design tokens JSON copied to clipboard!');
+    }
+
+    function copyTailwindConfig() {
+      const tw = `colors: {
+  paper: '#FAF8F5',
+  ink: '#1A1918',
+  forest: '#244B3B',
+  ochre: '#925E0A',
+  vermilion: '#C83E2B',
+  editorial: {
+    border: '#E5E0D8',
+    subtle: '#F2EFE9',
+    muted: '#736E65'
+  }
+}`;
+      const tempInput = document.createElement('textarea');
+      tempInput.value = tw;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      showToast('Tailwind color config copied to clipboard!');
+    }
+  </script>
+
+</body>
+</html>

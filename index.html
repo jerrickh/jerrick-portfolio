@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jerrick Haddad — Content Strategy, Communications & AI Leadership</title>
+  <meta name="description" content="Communications leader with 15+ years building strategy, systems, and digital infrastructure for global organizations and C-suite networks." />
+  
+  <!-- Open Graph / AEO -->
+  <meta property="og:title" content="Jerrick Haddad — Communications & Digital Strategy Leader" />
+  <meta property="og:description" content="15+ years of executive communications, digital infrastructure overhauls and GenAI implementation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.jerrickhaddad.com" />
+  
+  <!-- Schema.org JSON-LD for Search & AI Engines (AEO/GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jerrick Haddad",
+    "jobTitle": "Director of Thought Leadership",
+    "email": "mailto:jerrickh@gmail.com",
+    "telephone": "+1-646-715-7012",
+    "url": "https://www.jerrickhaddad.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brooklyn",
+      "addressRegion": "NY",
+      "addressCountry": "US"
+    },
+    "knowsAbout": [
+      "Thought Leadership",
+      "Content Strategy",
+      "Digital Infrastructure",
+      "Generative AI Implementation",
+      "Executive Communications",
+      "Generative Engine Optimization (GEO)"
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            paper: '#FAF8F5',
+            ink: '#1A1918',
+            forest: {
+              DEFAULT: '#244B3B',
+              hover: '#1A382C',
+              light: '#EEF4F0',
+            },
+            ochre: {
+              DEFAULT: '#925E0A',
+              soft: '#F2D38A',
+              light: '#FDF8EE',
+            },
+            vermilion: {
+              DEFAULT: '#C83E2B',
+              hover: '#A63020',
+            },
+            editorial: {
+              border: '#E5E0D8',
+              muted: '#736E65',
+              subtle: '#F2EFE9',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .editorial-double-border {
+      border-top: 3px double #1A1918;
+    }
+    .editorial-double-border-bottom {
+      border-bottom: 3px double #E5E0D8;
+    }
+    .editorial-highlighter {
+      background-image: linear-gradient(rgba(242, 211, 138, 0.75), rgba(242, 211, 138, 0.75));
+      background-repeat: no-repeat;
+      background-size: 100% 88%;
+      background-position: 0 60%;
+      padding: 0.05em 0.2em;
+      border-radius: 2px;
+    }
+    
+    /* Camera Flash Animation for Secret Photo Frame */
+    @keyframes cameraFlash {
+      0% { opacity: 0.95; background-color: #ffffff; }
+      100% { opacity: 0; background-color: transparent; }
+    }
+    .flash-overlay {
+      animation: cameraFlash 0.4s ease-out forwards;
+    }
+
+    @keyframes geocitiesBgDrift {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: 500px 500px, -250px 250px; }
+    }
+    @keyframes rainbowTextPulse {
+      0% { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
+      25% { color: #ffff00; text-shadow: 0 0 8px #ffff00; }
+      50% { color: #00ff00; text-shadow: 0 0 8px #00ff00; }
+      75% { color: #00ffff; text-shadow: 0 0 8px #00ffff; }
+      100% { color: #ff00ff; text-shadow: 0 0 8px #ff00ff; }
+    }
+    @keyframes marqueeMove {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    body.geocities-mode {
+      background-color: #000055 !important;
+      background-image: 
+        radial-gradient(#00ffff 2px, transparent 0),
+        radial-gradient(#ff00ff 2px, #000022 0) !important;
+      background-size: 40px 40px, 80px 80px !important;
+      background-position: 0 0, 20px 20px !important;
+      animation: geocitiesBgDrift 12s linear infinite !important;
+      color: #00ff00 !important;
+      font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important;
+    }
+    body.geocities-mode h1, 
+    body.geocities-mode h2, 
+    body.geocities-mode h3 {
+      font-family: "Impact", fantasy !important;
+      animation: rainbowTextPulse 3s infinite !important;
+    }
+    body.geocities-mode article,
+    body.geocities-mode section,
+    body.geocities-mode div.bg-white,
+    body.geocities-mode div.bg-paper {
+      background-color: #000000 !important;
+      border: 4px ridge #c0c0c0 !important;
+      color: #00ff00 !important;
+      box-shadow: 5px 5px 0px #ff00ff !important;
+    }
+    body.geocities-mode .editorial-highlighter {
+      background-image: linear-gradient(#ff00ff, #ff00ff) !important;
+      color: #ffffff !important;
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-forest selection:text-white min-h-screen">
+
+  <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-forest z-50 transition-all duration-150" style="width: 0%"></div>
+
+  <!-- GeoCities Animated Marquee Banner (Hidden by Default) -->
+  <div id="geocitiesMarquee" class="hidden bg-yellow-300 text-black overflow-hidden font-mono text-xs py-1 font-bold border-b-2 border-black z-50 sticky top-0">
+    <div class="whitespace-nowrap animate-[marqueeMove_15s_linear_infinite]">
+      🚀 WELCOME TO JERRICK HADDAD'S HOMEPAGE — BEST VIEWED AT 800x600 IN NETSCAPE NAVIGATOR 4.0! — UNDER CONSTRUCTION 🚧 🚀
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-paper/90 backdrop-blur-md border-b border-editorial-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" onclick="handleLogoClick(event)" class="font-mono text-sm tracking-tight hover:text-forest transition font-bold flex items-center gap-2">
+        <span class="text-ochre">◆</span> JERRICK HADDAD
+      </a>
+      
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-xs font-mono">
+        <a href="#work" class="text-editorial-muted hover:text-ink transition">Case Studies</a>
+        <a href="#expertise" class="text-editorial-muted hover:text-ink transition">Pillars</a>
+        <a href="#experience" class="text-editorial-muted hover:text-ink transition">Experience</a>
+        <a href="#about" class="text-editorial-muted hover:text-ink transition">About</a>
+        <a href="#contact" class="px-3 py-1.5 bg-vermilion hover:bg-vermilion-hover text-white rounded transition shadow-xs">Contact Direct</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-ink hover:text-forest">
+        <i id="menuIcon" class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-paper border-b border-editorial-border px-6 py-4 space-y-3 font-mono text-xs">
+      <a href="#work" onclick="toggleMobileMenu()" class="block py-1 text-ink">Case Studies</a>
+      <a href="#expertise" onclick="toggleMobileMenu()" class="block py-1 text-ink">Pillars</a>
+      <a href="#experience" onclick="toggleMobileMenu()" class="block py-1 text-ink">Experience</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block py-1 text-ink">About</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 bg-vermilion text-white text-center rounded font-sans font-medium">Contact Direct</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-20 space-y-16">
+
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-4 md:pt-8 pb-6">
+      <div class="md:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-forest-light border border-forest/20 rounded-full text-xs font-mono text-forest">
+          <span class="w-2 h-2 rounded-full bg-forest animate-pulse"></span>
+          <span>Available for Executive Leadership Roles</span>
+        </div>
+        
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-ink leading-[1.12] font-normal tracking-tight">
+          Bridging the gap between enterprise knowledge and human understanding.
+        </h1>
+        
+        <p class="text-base sm:text-lg text-editorial-muted font-sans font-normal leading-relaxed max-w-2xl">
+          Communications leader with 15+ years of experience building strategies, channels, and digital infrastructure for global organizations and C-suite networks. Former Director of Thought Leadership at Page Society; Global Digital Strategist at CEMEX.
+        </p>
+
+        <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono">
+          <a href="#contact" class="px-5 py-2.5 bg-vermilion hover:bg-vermilion-hover text-white rounded transition shadow-xs flex items-center gap-2">
+            <span>Contact Me Direct</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <a href="#work" class="px-5 py-2.5 bg-white border border-editorial-border hover:bg-editorial-subtle text-ink rounded transition">
+            Explore Strategic Impact
+          </a>
+        </div>
+      </div>
+
+      <div class="md:col-span-5">
+        <div class="bg-white p-3 rounded-lg border border-editorial-border shadow-xs space-y-3">
+          <div id="heroPhotoContainer" onclick="handlePhotoClick()" class="aspect-[4/5] bg-ink rounded overflow-hidden relative group cursor-pointer transition-all duration-300" title="Click 3 times to unlock secret photo vault">
+            
+            <!-- Camera Shutter Flash Overlay -->
+            <div id="cameraFlashOverlay" class="absolute inset-0 z-30 pointer-events-none hidden"></div>
+
+            <img 
+              id="heroPhoto" 
+              src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=1000&auto=format&fit=crop" 
+              alt="Featured Photography by Jerrick Haddad" 
+              class="w-full h-full object-cover transition-opacity duration-300"
+            />
+            <div id="photoBadge" class="absolute top-3 left-3 bg-ink/80 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-white uppercase tracking-wider border border-white/10 flex items-center gap-1.5 transition-all">
+              <span class="w-1.5 h-1.5 rounded-full bg-ochre"></span>
+              <span id="badgeText">The Featured Lens</span>
+            </div>
+            
+            <!-- Controls Overlay -->
+            <div class="absolute bottom-3 right-3 flex items-center gap-1 bg-ink/80 backdrop-blur-md p-1 rounded border border-white/10 z-20" onclick="event.stopPropagation()">
+              <button onclick="prevPhoto()" class="w-6 h-6 flex items-center justify-center text-white hover:text-ochre text-xs"><i class="fa-solid fa-chevron-left"></i></button>
+              <button onclick="nextPhoto()" class="w-6 h-6 flex items-center justify-center text-white hover:text-ochre text-xs"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between text-xs font-mono pt-1">
+            <div>
+              <span id="photoTitle" class="block font-semibold text-ink">Modernist Geometry</span>
+              <span id="photoLocation" class="text-[10px] text-editorial-muted">Shot by Jerrick • Brooklyn, NY</span>
+            </div>
+            <span id="photoCounter" class="text-[10px] text-ochre font-bold">01 / 04</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ink text-paper rounded-lg p-6 md:p-8 shadow-sm">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div class="pt-2 md:pt-0">
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">15+ Yrs</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Executive Comms & AI</p>
+        </div>
+        <div class="pt-4 md:pt-0 md:pl-6">
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">1,400+</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Executive Members Reached</p>
+        </div>
+        <div class="pt-4 md:pt-0 md:pl-6">
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">100+</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Annual Strategy Assets</p>
+        </div>
+        <div class="pt-4 md:pt-0 md:pl-6">
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">20+</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Nations Governance</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="space-y-6">
+      <div class="border-b border-editorial-border pb-3 flex items-end justify-between">
+        <div>
+          <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">HOW I WORK</span>
+          <h2 class="text-2xl font-serif text-ink mt-0.5">Three Core Pillars of Practice</h2>
+        </div>
+        <span class="text-xs font-mono text-editorial-muted">01 // PHILOSOPHY</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-editorial-border border border-editorial-border rounded overflow-hidden">
+        <div class="bg-paper p-6 md:p-8 space-y-3">
+          <span class="text-xs font-mono text-forest font-bold">01. EDITORIAL STRATEGY</span>
+          <h3 class="text-xl font-serif text-ink font-normal">Content & Editorial Governance</h3>
+          <p class="text-sm text-editorial-muted leading-relaxed">
+            Building cross-functional committees and channel playbooks that maintain a unified voice across newsletters, podcasts, and events without operational friction.
+          </p>
+        </div>
+        <div class="bg-paper p-6 md:p-8 space-y-3">
+          <span class="text-xs font-mono text-forest font-bold">02. INFRASTRUCTURE & AI</span>
+          <h3 class="text-xl font-serif text-ink font-normal">Digital Systems & Generative AI</h3>
+          <p class="text-sm text-editorial-muted leading-relaxed">
+            Directing website overhauls, taxonomy structuring, and custom AI chatbot builds (Artie) that index enterprise archives and turn static IP into interactive tools.
+          </p>
+        </div>
+        <div class="bg-paper p-6 md:p-8 space-y-3">
+          <span class="text-xs font-mono text-forest font-bold">03. THOUGHT LEADERSHIP</span>
+          <h3 class="text-xl font-serif text-ink font-normal">Benchmarking & Trend Insights</h3>
+          <p class="text-sm text-editorial-muted leading-relaxed">
+            Converting complex industry surveys into definitive benchmarking frameworks that directly address C-suite executive priorities and drive organizational growth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-editorial-border pb-4">
+        <div>
+          <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">TRACK RECORD</span>
+          <h2 class="text-2xl font-serif text-ink mt-0.5">Selected Impact & Case Studies</h2>
+          <p class="text-xs font-mono text-editorial-muted mt-1">Click any card to inspect full operational details & portfolio visuals</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 text-xs font-mono">
+          <button onclick="filterCaseStudies('all')" id="tab-all" class="filter-btn px-3 py-1.5 bg-forest text-white rounded transition">All Projects</button>
+          <button onclick="filterCaseStudies('ai')" id="tab-ai" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">AI & Infrastructure</button>
+          <button onclick="filterCaseStudies('governance')" id="tab-governance" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">Global Governance</button>
+          <button onclick="filterCaseStudies('thought-leadership')" id="tab-thought-leadership" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">Thought Leadership & Media</button>
+        </div>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Case Study 01: Artie AI -->
+        <article data-category="ai" onclick="openModal('artie')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
+            <div>
+              <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
+                <span class="text-ochre font-bold">CASE STUDY 01</span> // AI INTEGRATION & KNOWLEDGE ARCHITECTURE
+              </span>
+              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">"Artie" AI Knowledge Base Chatbot</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society</span>
+              <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
+                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
+              <p>Managing an archived ecosystem of legacy research made discovery difficult for executive users. The organization required a modern system to surface institutional knowledge instantly.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
+              <p>Directed a full website overhaul and taxonomy restructuring. Led the RFP process, content ingestion, prompt guardrail testing, and response optimization for an enterprise chatbot.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
+              <p>Deployed Artie, an AI chatbot that <span class="editorial-highlighter">indexed enterprise IP, cut user friction, and opened valuable new sponsorship opportunities</span>.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 02: CEMEX -->
+        <article data-category="governance" onclick="openModal('cemex')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
+            <div>
+              <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
+                <span class="text-ochre font-bold">CASE STUDY 02</span> // GLOBAL GOVERNANCE & MARKETING
+              </span>
+              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">CEMEX Global Digital Architecture</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">CEMEX (Global)</span>
+              <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
+                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
+              <p>Rigid corporate mandates alienate regional teams, while total decentralization risks fracturing brand narrative across international business units.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
+              <p>Engineered a marketing governance framework balancing central alignment with local execution. Created localized content playbooks and trained comms managers in 20+ countries.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
+              <p>Unified digital presence across 4 languages and 20,000+ customers. <span class="editorial-highlighter">Documented as a premier strategic industry case study</span>.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 03: Events Strategy -->
+        <article data-category="thought-leadership" onclick="openModal('events')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
+            <div>
+              <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
+                <span class="text-ochre font-bold">CASE STUDY 03</span> // EVENT CONTENT GOVERNANCE & KNOWLEDGE PIPELINE
+              </span>
+              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">Executive Event Strategy & Content Architecture</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society</span>
+              <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
+                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
+              <p>Live conference insights easily evaporate post-event without structured content governance to capture fleeting speaker storytelling.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
+              <p>Mapped key event themes to a master content strategy, utilizing AI transcription on pre-calls and live sessions to transform raw conversation into standardized educational assets.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
+              <p>Eliminated post-event bottlenecks and <span class="editorial-highlighter">converted live speaker insights into tagged research modules</span> that permanently populated the member knowledge base.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 04: Page Navigator -->
+        <article data-category="thought-leadership" onclick="openModal('benchmarking')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
+            <div>
+              <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
+                <span class="text-ochre font-bold">CASE STUDY 04</span> // BENCHMARKING & RESEARCH
+              </span>
+              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">Page Navigator: Benchmarking Survey & Trend Reports</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society</span>
+              <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
+                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
+              <p>Enterprise leaders needed actionable benchmarks on rapid corporate shifts; traditional market data was too slow or dense for executive decision-making.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
+              <p>Designed survey instruments, chaired insight committees, and orchestrated a multi-channel global rollout and email campaign.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
+              <p>Converted raw input into primary insights for 1,400 executive members reached, <span class="editorial-highlighter">exceeding targets with a 75%+ member download rate</span>.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 05: Podcast Production -->
+        <article data-category="thought-leadership" onclick="openModal('podcasts')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
+            <div>
+              <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
+                <span class="text-ochre font-bold">CASE STUDY 05</span> // MULTIMEDIA & AUDIO PRODUCTION
+              </span>
+              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">Independent & Enterprise Podcast Production</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society / Independent</span>
+              <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
+                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
+              <p>Required interactive media platforms to highlight complex industry insights without external agency budgets, building warm executive engagement.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
+              <p>Managed tip-to-tail production across both enterprise (Page Society) and independent podcast series (<em>The People You Meet in Old Town</em>): recorded, edited, and directed analytics.</p>
+            </div>
+            <div class="bg-paper p-4 rounded border border-editorial-border/80">
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
+              <p>Delivered 12 strategic episodes annually at <span class="editorial-highlighter">zero external agency cost</span>, cultivating an active listener and member pipeline.</p>
+            </div>
+          </div>
+
+          <!-- Embedded Audio Preview Container -->
+          <div class="pt-2" onclick="event.stopPropagation()">
+            <p class="text-xs font-mono text-editorial-muted uppercase mb-2">Featured Podcast Sample Preview</p>
+            <div class="w-full bg-paper p-3 rounded border border-editorial-border">
+              <iframe style="border-radius:8px" src="https://open.spotify.com/embed/episode/7G4pZ5x?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="meta-build" class="p-6 md:p-8 bg-paper rounded border-2 border-forest/30 shadow-sm space-y-6 relative overflow-hidden">
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border pb-4">
+        <div>
+          <span class="text-xs font-mono text-forest font-bold uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-code text-ochre"></i> META / BEHIND THE BUILD // TANGIBLE GENAI PROOF
+          </span>
+          <h2 class="text-2xl font-serif text-ink mt-1 font-normal">How This Website Was Built</h2>
+        </div>
+        <span class="text-xs font-mono px-3 py-1 bg-forest-light text-forest border border-forest/20 rounded">Hands-on AI Execution</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
+        <div class="bg-white p-4 rounded border border-editorial-border">
+          <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-ochre">
+            <i class="fa-solid fa-lightbulb"></i> Philosophy & Context
+          </p>
+          <p>Rather than claiming AI fluency theoretically, I engineered this site and a live interactive design system card to demonstrate hands-on prompting, front-end architecture, and token governance.</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-editorial-border">
+          <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-forest">
+            <i class="fa-solid fa-sliders"></i> Technical Architecture
+          </p>
+          <p>Synthesized Glasgow School of Art design constraints, WCAG 2.1 AAA contrast rules, and Tailwind CSS tokens into prompts to produce structured component specifications.</p>
+        </div>
+        <div class="bg-white p-4 rounded border border-editorial-border">
+          <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-forest">
+            <i class="fa-solid fa-terminal"></i> Tangible Deliverable
+          </p>
+          <p>Delivered an interactive, WCAG AAA-compliant specification card that serves as live proof of prompt engineering and front-end system execution.</p>
+        </div>
+      </div>
+
+      <div class="pt-2 border-t border-editorial-border flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-2 text-xs font-mono text-editorial-muted">
+          <i class="fa-solid fa-circle-check text-forest"></i>
+          <span>Includes WCAG AAA Contrast Inspector, Live Token Exporter & Font Scale Specimen</span>
+        </div>
+        <a href="design_system_card.html" target="_blank" class="px-4 py-2 bg-forest hover:bg-forest-hover text-white text-xs font-mono rounded transition flex items-center gap-2 shadow-xs">
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          <span>Launch Live Interactive Specification Card</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="experience" class="space-y-6">
+      <div class="border-b border-editorial-border pb-3 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">CAREER HISTORY</span>
+          <h2 class="text-2xl font-serif text-ink mt-0.5">Professional Timeline & Experience</h2>
+        </div>
+        
+        <!-- CV & Portfolio Download Buttons -->
+        <div class="flex flex-wrap gap-2">
+          <a href="Portfolio_JerrickHaddad_June2026.pdf" target="_blank" class="px-3.5 py-2 bg-paper border border-editorial-border hover:bg-editorial-subtle text-ink text-xs font-mono rounded transition flex items-center gap-1.5 shadow-xs">
+            <i class="fa-solid fa-file-lines text-forest"></i>
+            <span>Download Full Portfolio (PDF)</span>
+          </a>
+          <a href="Jerrick_Haddad_Resume_July2026.pdf" target="_blank" class="px-3.5 py-2 bg-paper border border-editorial-border hover:bg-editorial-subtle text-ink text-xs font-mono rounded transition flex items-center gap-1.5 shadow-xs">
+            <i class="fa-solid fa-file-pdf text-vermilion"></i>
+            <span>Download Complete CV (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="divide-y divide-editorial-border border-y border-editorial-border font-sans">
+        
+        <!-- Role 1 -->
+        <div class="py-6 grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-3 text-xs font-mono text-editorial-muted">
+            <span class="block text-ink font-semibold">2020 — 2026</span>
+            <span>Page Society</span>
+          </div>
+          <div class="md:col-span-6 space-y-2">
+            <h3 class="text-base font-serif font-medium text-ink">Director, Thought Leadership & Digital Content Strategy</h3>
+            <p class="text-xs text-editorial-muted leading-relaxed">
+              Led content strategy, editorial channel coordination, digital infrastructure, and thought leadership for one of the world's most respected C-suite communications organizations, serving senior executives globally.
+            </p>
+          </div>
+          <div class="md:col-span-3 text-xs font-mono md:text-right text-editorial-muted">
+            New York, NY
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="py-6 grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-3 text-xs font-mono text-editorial-muted">
+            <span class="block text-ink font-semibold">2012 — 2019</span>
+            <span>CEMEX</span>
+          </div>
+          <div class="md:col-span-6 space-y-2">
+            <h3 class="text-base font-serif font-medium text-ink">Digital Strategist (Global)</h3>
+            <p class="text-xs text-editorial-muted leading-relaxed">
+              Bridged Global Communications, Marketing, and Investor Relations, building a global content and social media function from the ground up across 20+ business units worldwide.
+            </p>
+          </div>
+          <div class="md:col-span-3 text-xs font-mono md:text-right text-editorial-muted">
+            New York, NY • Global
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="py-6 grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-3 text-xs font-mono text-editorial-muted">
+            <span class="block text-ink font-semibold">2006 — 2010</span>
+            <span>Partners Healthcare</span>
+          </div>
+          <div class="md:col-span-6 space-y-2">
+            <h3 class="text-base font-serif font-medium text-ink">Video Producer & Content Strategist</h3>
+            <p class="text-xs text-editorial-muted leading-relaxed">
+              Worked within Harvard teaching hospitals to plan, direct, and edit weekly educational content and video courses in partnership with physicians and subject matter experts.
+            </p>
+          </div>
+          <div class="md:col-span-3 text-xs font-mono md:text-right text-editorial-muted">
+            Boston, MA
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about" class="p-6 md:p-8 bg-ink text-paper rounded-lg space-y-6">
+      <div class="max-w-3xl space-y-4">
+        <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">ABOUT JERRICK HADDAD</span>
+        <h2 class="text-2xl md:text-3xl font-serif text-paper font-normal">Behind the Strategy</h2>
+        <p class="text-editorial-subtle text-sm leading-relaxed">
+          I am a communications leader with over 15 years of experience building the strategy, systems, and content that bridge the gap between what complex organizations know and what their audiences need to hear.
+        </p>
+        <p class="text-editorial-subtle text-sm leading-relaxed">
+          My approach relies on stripping away operational friction, partnering closely with subject matter experts, and structuring data-driven narratives that ground complex institutional ideas in human reality—whether through executive communications, AI knowledge architecture, or global governance.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="p-6 md:p-10 bg-white rounded-lg border border-editorial-border space-y-8 shadow-xs">
+      <div class="space-y-2 max-w-xl">
+        <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">DIRECT CONTACT</span>
+        <h2 class="text-2xl md:text-3xl font-serif text-ink font-normal">Connect Direct</h2>
+        <p class="text-editorial-muted text-sm leading-relaxed">
+          Currently exploring in-house leadership roles in communications, brand strategy, and digital transformation.
+        </p>
+      </div>
+
+      <!-- Formspree Direct Form -->
+      <form action="https://formspree.io/f/mqernvqg" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+        <div>
+          <label class="block text-xs font-mono text-editorial-muted mb-1 uppercase">YOUR NAME</label>
+          <input type="text" name="name" required class="w-full px-3.5 py-2.5 bg-paper border border-editorial-border rounded text-xs font-mono text-ink focus:outline-none focus:border-forest transition" placeholder="Max Fischer" />
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-editorial-muted mb-1 uppercase">EMAIL ADDRESS</label>
+          <input type="email" name="email" required class="w-full px-3.5 py-2.5 bg-paper border border-editorial-border rounded text-xs font-mono text-ink focus:outline-none focus:border-forest transition" placeholder="m.fischer@rushmore.edu" />
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block text-xs font-mono text-editorial-muted mb-1 uppercase">MESSAGE</label>
+          <textarea name="message" rows="4" required class="w-full px-3.5 py-2.5 bg-paper border border-editorial-border rounded text-xs font-mono text-ink focus:outline-none focus:border-forest transition" placeholder="Inquire regarding leadership roles or executive advisory..."></textarea>
+        </div>
+        <button type="submit" class="sm:col-span-2 py-3 bg-vermilion hover:bg-vermilion-hover text-white font-medium text-xs font-mono rounded transition shadow-xs flex items-center justify-center gap-2">
+          <span>Send Direct Email</span>
+          <i class="fa-solid fa-paper-plane text-[10px]"></i>
+        </button>
+      </form>
+
+      <div class="pt-4 border-t border-editorial-border flex flex-wrap justify-between text-xs font-mono text-editorial-muted gap-2">
+        <p>Email: <a href="mailto:jerrickh@gmail.com" class="text-ink underline">jerrickh@gmail.com</a></p>
+        <p>Phone: +1 646 715 7012</p>
+        <p>Location: Brooklyn, NY</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Modal Detail Drawer -->
+  <div id="caseStudyModal" class="fixed inset-0 z-50 bg-ink/70 backdrop-blur-sm hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto" onclick="closeModal()">
+    <div class="bg-paper max-w-3xl w-full rounded-lg border border-editorial-border shadow-2xl overflow-hidden relative my-8" onclick="event.stopPropagation()">
+      
+      <!-- Modal Header -->
+      <div class="p-6 bg-white border-b border-editorial-border flex items-start justify-between gap-4">
+        <div>
+          <span id="modalCategory" class="text-xs font-mono text-ochre font-bold uppercase tracking-wider block">CASE STUDY DETAIL</span>
+          <h2 id="modalTitle" class="text-2xl font-serif text-ink mt-1 font-normal">Project Title</h2>
+          <span id="modalOrg" class="text-xs font-mono text-editorial-muted mt-0.5 block">Organization</span>
+        </div>
+        <button onclick="closeModal()" class="w-8 h-8 rounded bg-editorial-subtle hover:bg-editorial-border text-ink flex items-center justify-center text-sm transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 md:p-8 space-y-6 text-sm text-ink leading-relaxed max-h-[70vh] overflow-y-auto">
+        
+        <!-- Extended Narrative Grid -->
+        <div class="space-y-4">
+          <div class="bg-white p-4 rounded border border-editorial-border">
+            <h4 class="font-mono text-xs font-bold text-ochre uppercase tracking-wider mb-2">◆ The Challenge & Organizational Context</h4>
+            <p id="modalContext" class="text-editorial-muted">Context description...</p>
+          </div>
+
+          <div class="bg-white p-4 rounded border border-editorial-border">
+            <h4 class="font-mono text-xs font-bold text-forest uppercase tracking-wider mb-2">◆ Specific Tactical Contribution</h4>
+            <p id="modalContribution" class="text-editorial-muted">Contribution description...</p>
+          </div>
+
+          <div class="bg-white p-4 rounded border border-editorial-border">
+            <h4 class="font-mono text-xs font-bold text-forest uppercase tracking-wider mb-2">◆ Real-World Measurable Result</h4>
+            <p id="modalResult" class="text-ink font-medium">Result description...</p>
+          </div>
+        </div>
+
+        <!-- Portfolio Slide Placeholder Visual -->
+        <div class="pt-4 border-t border-editorial-border">
+          <p class="text-xs font-mono text-editorial-muted uppercase mb-2">Executive Portfolio Visual Deck Specimen</p>
+          <div class="aspect-video bg-ink rounded border border-editorial-border flex flex-col items-center justify-center p-6 text-center text-paper relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-forest/30 via-transparent to-ochre/20"></div>
+            <i class="fa-solid fa-file-powerpoint text-3xl text-ochre mb-2 z-10"></i>
+            <p id="modalSlideTitle" class="font-serif text-lg z-10">Portfolio Slide Detail</p>
+            <p class="text-xs font-mono text-editorial-border mt-1 z-10">Source: Jerrick Haddad Strategic Portfolio (June 2026)</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-editorial-subtle border-t border-editorial-border flex items-center justify-between text-xs font-mono">
+        <span class="text-editorial-muted">Documented in Master Portfolio</span>
+        <button onclick="closeModal()" class="px-4 py-2 bg-ink text-paper hover:bg-forest rounded transition">
+          Close Detail View
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="max-w-6xl mx-auto px-4 sm:px-6 py-6 border-t border-editorial-border text-xs font-mono text-editorial-muted flex flex-wrap items-center justify-between gap-4">
+    <p>&copy; <span id="year"></span> Jerrick Haddad. All rights reserved.</p>
+    
+    <div class="flex items-center gap-4">
+      <button onclick="toggleGeoCities()" class="text-[11px] text-editorial-muted hover:text-forest transition flex items-center gap-1.5 px-2.5 py-1 bg-editorial-subtle rounded border border-editorial-border shadow-xs">
+        <i class="fa-solid fa-rocket text-ochre"></i>
+        <span id="themeToggleText">GeoCities '99 Mode</span>
+      </button>
+      <span>Glasgow Editorial Style</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Modal Case Study Data
+    const caseStudyData = {
+      artie: {
+        category: "CASE STUDY 01 // AI INTEGRATION & KNOWLEDGE ARCHITECTURE",
+        title: '"Artie" AI Knowledge Base Chatbot',
+        org: "Page Society",
+        context: "Managing an archived ecosystem of legacy research made discovery difficult for C-suite executive members. The organization required a modern system to surface deep institutional knowledge instantly.",
+        contribution: "Directed a full website overhaul and taxonomy restructuring. Led the RFP process, content ingestion, prompt guardrail testing, and response optimization for an enterprise chatbot trained on a decade of research.",
+        result: "Deployed Artie, an AI-powered chatbot that seamlessly indexed enterprise IP, stripped away user friction, and opened valuable new sponsorship opportunities.",
+        slideTitle: "Artie AI Chatbot — Architecture & Ingestion Flow"
+      },
+      cemex: {
+        category: "CASE STUDY 02 // GLOBAL GOVERNANCE & MARKETING",
+        title: "CEMEX Global Digital Architecture",
+        org: "CEMEX (Global across 20+ countries)",
+        context: "Rigid corporate mandates alienate regional teams, while total decentralization risks fracturing brand narrative across international business units.",
+        contribution: "Engineered a marketing governance framework balancing central alignment with local execution. Created localized content playbooks and trained regional comms managers in 20+ countries.",
+        result: "Unified digital presence across 4 languages and 20,000+ customers. Documented as a premier strategic industry case study for an enterprise partner webinar.",
+        slideTitle: "CEMEX Global-to-Local Social Strategy Framework"
+      },
+      events: {
+        category: "CASE STUDY 03 // EVENT CONTENT GOVERNANCE",
+        title: "Executive Event Strategy & Content Pipeline",
+        org: "Page Society",
+        context: "Live conference insights easily evaporate post-event without structured content governance to capture fleeting speaker storytelling.",
+        contribution: "Mapped key event themes to a master content strategy, utilizing AI transcription on pre-calls and live sessions to transform raw conversation into standardized educational assets.",
+        result: "Closed the loop between strategy and distribution, eliminating post-event administrative bottlenecks and converting speaker insights into permanent member research modules.",
+        slideTitle: "Events Strategy & Content Processing Architecture"
+      },
+      benchmarking: {
+        category: "CASE STUDY 04 // BENCHMARKING & RESEARCH",
+        title: "Page Navigator: Benchmarking Survey & Trend Reports",
+        org: "Page Society",
+        context: "Fortune 500 CCOs needed actionable benchmarks on rapid corporate shifts; traditional market data was too slow or dense for executive decision-making.",
+        contribution: "Designed survey instruments, chaired insight committees, and orchestrated a multi-channel global rollout and email campaign.",
+        result: "Converted raw input into primary insights for 1,400 executive members reached, exceeding targets with a 75%+ member download rate.",
+        slideTitle: "Page Navigator Survey Instrument & Executive Report"
+      },
+      podcasts: {
+        category: "CASE STUDY 05 // MULTIMEDIA & AUDIO PRODUCTION",
+        title: "Independent & Enterprise Podcast Production",
+        org: "Page Society / Independent",
+        context: "Required interactive media platforms to highlight complex industry insights without external agency budgets, building warm executive engagement.",
+        contribution: "Managed tip-to-tail production across both enterprise (Page Society) and independent podcast series (The People You Meet in Old Town): recorded, edited, and directed analytics.",
+        result: "Delivered 12 strategic episodes annually at zero external agency cost, cultivating an active listener and member pipeline.",
+        slideTitle: "Podcast Audio Pipeline & Listener Analytics"
+      }
+    };
+
+    function openModal(key) {
+      const data = caseStudyData[key];
+      if (!data) return;
+
+      document.getElementById('modalCategory').textContent = data.category;
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalOrg').textContent = data.org;
+      document.getElementById('modalContext').textContent = data.context;
+      document.getElementById('modalContribution').textContent = data.contribution;
+      document.getElementById('modalResult').textContent = data.result;
+      document.getElementById('modalSlideTitle').textContent = data.slideTitle;
+
+      document.getElementById('caseStudyModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('caseStudyModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Secret Photo Frame Easter Egg
+    let photoClickCount = 0;
+    function handlePhotoClick() {
+      photoClickCount++;
+      if (photoClickCount === 3) {
+        const photoContainer = document.getElementById('heroPhotoContainer');
+        const flashOverlay = document.getElementById('cameraFlashOverlay');
+        const photoEl = document.getElementById('heroPhoto');
+        const photoBadge = document.getElementById('photoBadge');
+        const badgeText = document.getElementById('badgeText');
+        
+        if (flashOverlay) {
+          flashOverlay.classList.remove('hidden');
+          flashOverlay.classList.add('flash-overlay');
+          setTimeout(() => {
+            flashOverlay.classList.add('hidden');
+            flashOverlay.classList.remove('flash-overlay');
+          }, 450);
+        }
+
+        if (photoContainer) photoContainer.classList.add('ring-2', 'ring-ochre', 'shadow-lg');
+        if (photoBadge) photoBadge.className = "absolute top-3 left-3 bg-ochre text-white px-2.5 py-1 rounded text-[10px] font-mono uppercase tracking-wider font-bold shadow-md flex items-center gap-1.5 animate-bounce z-20";
+        if (badgeText) badgeText.textContent = "📸 Archival Vault Unlocked";
+
+        photoEl.style.opacity = '0';
+        setTimeout(() => {
+          photoEl.src = "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop";
+          document.getElementById('photoTitle').textContent = "Glasgow Esplanade Leap — Vault Edition";
+          document.getElementById('photoLocation').textContent = "Glasgow, Scotland • Shot by Jerrick";
+          document.getElementById('photoCounter').textContent = "VAULT 01";
+          photoEl.style.opacity = '1';
+        }, 150);
+
+        photoClickCount = 0;
+      }
+    }
+
+    // Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scrollProgress').style.width = scrolled + '%';
+    });
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Photography Frame Rotator
+    const photos = [
+      {
+        url: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=1000&auto=format&fit=crop",
+        title: "Modernist Geometry",
+        loc: "Shot by Jerrick • Brooklyn, NY",
+        num: "01 / 04"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1000&auto=format&fit=crop",
+        title: "Lakeside Waves",
+        loc: "Shot by Jerrick • Upstate NY",
+        num: "02 / 04"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop",
+        title: "Glasgow Esplanade Leap",
+        loc: "Shot by Jerrick • Glasgow, Scotland",
+        num: "03 / 04"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
+        title: "East River Sail",
+        loc: "Shot by Jerrick • New York, NY",
+        num: "04 / 04"
+      }
+    ];
+
+    let currentPhotoIdx = 0;
+    function updatePhoto() {
+      const photoEl = document.getElementById('heroPhoto');
+      photoEl.style.opacity = '0';
+      setTimeout(() => {
+        photoEl.src = photos[currentPhotoIdx].url;
+        document.getElementById('photoTitle').textContent = photos[currentPhotoIdx].title;
+        document.getElementById('photoLocation').textContent = photos[currentPhotoIdx].loc;
+        document.getElementById('photoCounter').textContent = photos[currentPhotoIdx].num;
+        photoEl.style.opacity = '1';
+      }, 200);
+    }
+
+    function nextPhoto() {
+      currentPhotoIdx = (currentPhotoIdx + 1) % photos.length;
+      updatePhoto();
+    }
+
+    function prevPhoto() {
+      currentPhotoIdx = (currentPhotoIdx - 1 + photos.length) % photos.length;
+      updatePhoto();
+    }
+
+    // Category Filter
+    function filterCaseStudies(category) {
+      const cards = document.querySelectorAll('.case-study-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-forest', 'text-white');
+        btn.classList.add('bg-editorial-subtle', 'text-ink');
+      });
+
+      const activeBtn = document.getElementById('tab-' + category);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-editorial-subtle', 'text-ink');
+        activeBtn.classList.add('bg-forest', 'text-white');
+      }
+
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Logo Click Easter Egg (5 Clicks)
+    let logoClicks = 0;
+    function handleLogoClick(e) {
+      logoClicks++;
+      if (logoClicks === 5) {
+        e.preventDefault();
+        alert('📸 Easter Egg Discovered! Loading secret photo frame...');
+        document.getElementById('photoTitle').textContent = 'Secret Frame — Behind the Lens';
+        logoClicks = 0;
+      }
+    }
+
+    // GeoCities '99 Mode Toggle
+    function toggleGeoCities() {
+      document.body.classList.toggle('geocities-mode');
+      const marquee = document.getElementById('geocitiesMarquee');
+      const label = document.getElementById('themeToggleText');
+      
+      if (document.body.classList.contains('geocities-mode')) {
+        marquee.classList.remove('hidden');
+        label.textContent = "Exit 1999 GeoCities 🚀";
+      } else {
+        marquee.classList.add('hidden');
+        label.textContent = "GeoCities '99 Mode";
+      }
+    }
+  </script>
+
+</body>
+</html>
