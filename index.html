@@ -216,7 +216,7 @@
 
         <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono">
           <a href="#contact" class="px-5 py-2.5 bg-vermilion hover:bg-vermilion-hover text-white rounded transition shadow-xs flex items-center gap-2">
-            <span>Contact Me Direct</span>
+            <span>Talk To Me</span>
             <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
           <a href="#work" class="px-5 py-2.5 bg-white border border-editorial-border hover:bg-editorial-subtle text-ink rounded transition">
@@ -234,13 +234,13 @@
 
             <img 
               id="heroPhoto" 
-              src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=1000&auto=format&fit=crop" 
+              src="images/photo-1.jpg" 
               alt="Featured Photography by Jerrick Haddad" 
               class="w-full h-full object-cover transition-opacity duration-300"
             />
             <div id="photoBadge" class="absolute top-3 left-3 bg-ink/80 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-white uppercase tracking-wider border border-white/10 flex items-center gap-1.5 transition-all">
               <span class="w-1.5 h-1.5 rounded-full bg-ochre"></span>
-              <span id="badgeText">The Featured Lens</span>
+              <span id="badgeText">A Few Photos</span>
             </div>
             
             <!-- Controls Overlay -->
@@ -253,7 +253,7 @@
           <div class="flex items-center justify-between text-xs font-mono pt-1">
             <div>
               <span id="photoTitle" class="block font-semibold text-ink">Modernist Geometry</span>
-              <span id="photoLocation" class="text-[10px] text-editorial-muted">Shot by Jerrick • Brooklyn, NY</span>
+              <span id="photoLocation" class="text-[10px] text-editorial-muted">Brooklyn, NY</span>
             </div>
             <span id="photoCounter" class="text-[10px] text-ochre font-bold">01 / 04</span>
           </div>
@@ -265,19 +265,19 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-white/10">
         <div class="pt-2 md:pt-0">
           <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">15+ Yrs</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Executive Comms & AI</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Comms & Content</p>
         </div>
         <div class="pt-4 md:pt-0 md:pl-6">
-          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">1,400+</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Executive Members Reached</p>
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">200%</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Traffic Increase for Corp Site</p>
         </div>
         <div class="pt-4 md:pt-0 md:pl-6">
           <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">100+</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Annual Strategy Assets</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Assets Produced Per Year</p>
         </div>
         <div class="pt-4 md:pt-0 md:pl-6">
-          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">20+</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Nations Governance</p>
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">18+</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Business Units Aligned</p>
         </div>
       </div>
     </section>
@@ -310,7 +310,7 @@
           <span class="text-xs font-mono text-forest font-bold">03. THOUGHT LEADERSHIP</span>
           <h3 class="text-xl font-serif text-ink font-normal">Benchmarking & Trend Insights</h3>
           <p class="text-sm text-editorial-muted leading-relaxed">
-            Converting complex industry surveys into definitive benchmarking frameworks that directly address C-suite executive priorities and drive organizational growth.
+            Converting complex data into definitive benchmarking frameworks that directly address C-suite executive priorities.
           </p>
         </div>
       </div>
@@ -329,7 +329,7 @@
           <button onclick="filterCaseStudies('all')" id="tab-all" class="filter-btn px-3 py-1.5 bg-forest text-white rounded transition">All Projects</button>
           <button onclick="filterCaseStudies('ai')" id="tab-ai" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">AI & Infrastructure</button>
           <button onclick="filterCaseStudies('governance')" id="tab-governance" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">Global Governance</button>
-          <button onclick="filterCaseStudies('thought-leadership')" id="tab-thought-leadership" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">Thought Leadership & Media</button>
+          <button onclick="filterCaseStudies('thought-leadership')" id="tab-thought-leadership" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">Thought Leadership & Content</button>
         </div>
       </div>
 
@@ -501,9 +501,9 @@
 
           <!-- Embedded Audio Preview Container -->
           <div class="pt-2" onclick="event.stopPropagation()">
-            <p class="text-xs font-mono text-editorial-muted uppercase mb-2">Featured Podcast Sample Preview</p>
+            <p class="text-xs font-mono text-editorial-muted uppercase mb-2">Podcst Preview</p>
             <div class="w-full bg-paper p-3 rounded border border-editorial-border">
-              <iframe style="border-radius:8px" src="https://open.spotify.com/embed/episode/7G4pZ5x?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              <iframe style="border-radius:8px" src="https://open.spotify.com/embed/episode/59gsgKdiOTCy4BvT0pXg3T?" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
           </div>
         </article>
@@ -515,7 +515,7 @@
       <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border pb-4">
         <div>
           <span class="text-xs font-mono text-forest font-bold uppercase tracking-wider flex items-center gap-2">
-            <i class="fa-solid fa-code text-ochre"></i> META / BEHIND THE BUILD // TANGIBLE GENAI PROOF
+            <i class="fa-solid fa-code text-ochre"></i> BEHIND THE BUILD // TANGIBLE GEN AI PROOF
           </span>
           <h2 class="text-2xl font-serif text-ink mt-1 font-normal">How This Website Was Built</h2>
         </div>
@@ -533,7 +533,7 @@
           <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-forest">
             <i class="fa-solid fa-sliders"></i> Technical Architecture
           </p>
-          <p>Synthesized core materials of CV, Portfolio and inspiration site. H/T Eliot Mizrachi. Used Claude and Gemini to develop, iterate, critique and walk me through uploading and troubleshooting. Designd and deployed in under 24 hours. </p>
+          <p>Synthesized core materials of CV, Portfolio and inspiration site. (H/T Eliot Mizrachi.) Used Claude and Gemini to develop, iterate, critique and walk me through uploading and troubleshooting. Designed and deployed in under 24 hours. </p>
         </div>
         <div class="bg-white p-4 rounded border border-editorial-border">
           <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-forest">
