@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jerrick Haddad — Content Strategy, Communications & Digital Leadership</title>
+  <title>Jerrick Haddad — Content Strategy, Communications, Editorial and AI</title>
   <meta name="description" content="Communications leader with 15+ years building strategy, systems and digital infrastructure for global organizations and C-suite networks." />
   
   <!-- Open Graph / AEO -->
   <meta property="og:title" content="Jerrick Haddad — Communications & Digital Strategy Leader" />
-  <meta property="og:description" content="15+ years of executive communications, digital infrastructure overhauls and GenAI implementation." />
+  <meta property="og:description" content="15+ years of content, communications & editorial strategy + AI implementation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.jerrickhaddad.com" />
   
@@ -92,7 +92,18 @@
       padding: 0.05em 0.2em;
       border-radius: 2px;
     }
-    
+    /* How this site was built background */
+    .bg-herringbone {
+  background-color: #FAF8F5;
+  background-image: 
+    linear-gradient(135deg, #E5E0D8 25%, transparent 25%), 
+    linear-gradient(225deg, #E5E0D8 25%, transparent 25%), 
+    linear-gradient(45deg, #E5E0D8 25%, transparent 25%), 
+    linear-gradient(315deg, #E5E0D8 25%, transparent 25%);
+  background-position: 8px 0, 8px 0, 0 0, 0 0;
+  background-size: 16px 16px;
+  background-repeat: repeat;
+}
     /* Subtle Diagonal Pattern for Meta Section */
     .bg-diagonal-stripes {
       background-color: #FAF8F5;
@@ -161,7 +172,7 @@
   <!-- GeoCities Animated Marquee Banner (Hidden by Default) -->
   <div id="geocitiesMarquee" class="hidden bg-yellow-300 text-black overflow-hidden font-mono text-xs py-1 font-bold border-b-2 border-black z-50 sticky top-0">
     <div class="whitespace-nowrap animate-[marqueeMove_15s_linear_infinite]">
-      🚀 WELCOME TO JERRICK HADDAD'S HOMEPAGE — BEST VIEWED AT 800x600 IN NETSCAPE NAVIGATOR 4.0! — UNDER CONSTRUCTION 🚧 🚀
+      🚀 WELCOME TO JERRICK HADDAD'S GEOCITIES PAGE — BEST VIEWED AT 800x600 IN NETSCAPE NAVIGATOR 4.0! — UNDER CONSTRUCTION 🚧 🚀
     </div>
   </div>
 
@@ -245,7 +256,7 @@
             />
             <div id="photoBadge" class="absolute top-3 left-3 bg-ink/80 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-white uppercase tracking-wider border border-white/10 flex items-center gap-1.5 transition-all">
               <span class="w-1.5 h-1.5 rounded-full bg-ochre"></span>
-              <span id="badgeText">A Few Photos</span>
+              <span id="badgeText">I love taking photos</span>
             </div>
             
             <!-- Controls Overlay -->
@@ -257,7 +268,7 @@
           
           <div class="flex items-center justify-between text-xs font-mono pt-1">
             <div>
-              <span id="photoTitle" class="block font-semibold text-ink">Modernist Geometry</span>
+              <span id="photoTitle" class="block font-semibold text-ink">Top Nine</span>
               <span id="photoLocation" class="text-[10px] text-editorial-muted">Brooklyn, NY</span>
             </div>
             <span id="photoCounter" class="text-[10px] text-ochre font-bold">01 / 04</span>
@@ -667,7 +678,7 @@
             </div>
             <div class="pt-1">
               <span class="block font-serif text-lg text-ink font-normal">Jerrick Haddad</span>
-              <span class="text-xs font-mono text-editorial-muted">Director of Thought Leadership & Content Strategy</span>
+              <span class="text-xs font-mono text-editorial-muted">Would love to work with you!</span>
             </div>
           </div>
           
@@ -684,7 +695,7 @@
             <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">DIRECT CONTACT</span>
             <h2 class="text-2xl md:text-3xl font-serif text-ink font-normal">Let's Connect</h2>
             <p class="text-editorial-muted text-sm leading-relaxed">
-              Believe me, I'd love to chat! I've made more than one friend on the subway. 
+              Let's talk!  
             </p>
           </div>
 
@@ -938,8 +949,9 @@
     const photos = [
       { url: "images/photo-1.jpg", title: "Modernist Geometry", loc: "Brooklyn, NY" },
       { url: "images/photo-2.jpg", title: "Lakeside Waves", loc: "Upstate NY" },
+      { url: "images/photo-4.jpg", title: "East River Sail", loc: "New York, NY" },
       { url: "images/photo-3.jpg", title: "Glasgow Esplanade", loc: "Glasgow, Scotland" },
-      { url: "images/photo-4.jpg", title: "East River Sail", loc: "New York, NY" }
+      { url: "images/photo-5.jpg", title: "Turtle Party", loc: "Prospect Park, NY" }
     ];
     let currentPhotoIdx = 0;
 
