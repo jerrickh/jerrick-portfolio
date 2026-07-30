@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jerrick Haddad — Content Strategy, Communications & AI Leadership</title>
+  <title>Jerrick Haddad — Content Strategy, Communications & Digital Leadership</title>
   <meta name="description" content="Communications leader with 15+ years building strategy, systems and digital infrastructure for global organizations and C-suite networks." />
   
   <!-- Open Graph / AEO -->
@@ -30,11 +30,11 @@
     },
     "knowsAbout": [
       "Thought Leadership",
-      "Content Strategy",
+      "Editorial Strategy",
+      "Content Governance",
       "Digital Infrastructure",
       "Generative AI Implementation",
-      "Executive Communications",
-      "Generative Engine Optimization (GEO)"
+      "Corporate Communications"
     ]
   }
   </script>
@@ -83,12 +83,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    .editorial-double-border {
-      border-top: 3px double #1A1918;
-    }
-    .editorial-double-border-bottom {
-      border-bottom: 3px double #E5E0D8;
-    }
+    .editorial-double-border { border-top: 3px double #1A1918; }
     .editorial-highlighter {
       background-image: linear-gradient(rgba(242, 211, 138, 0.75), rgba(242, 211, 138, 0.75));
       background-repeat: no-repeat;
@@ -98,14 +93,18 @@
       border-radius: 2px;
     }
     
+    /* Subtle Diagonal Pattern for Meta Section */
+    .bg-diagonal-stripes {
+      background-color: #FAF8F5;
+      background-image: repeating-linear-gradient(45deg, #F2EFE9 0, #F2EFE9 1px, transparent 0, transparent 50px);
+    }
+    
     /* Camera Flash Animation for Secret Photo Frame */
     @keyframes cameraFlash {
       0% { opacity: 0.95; background-color: #ffffff; }
       100% { opacity: 0; background-color: transparent; }
     }
-    .flash-overlay {
-      animation: cameraFlash 0.4s ease-out forwards;
-    }
+    .flash-overlay { animation: cameraFlash 0.45s ease-out forwards; }
 
     @keyframes geocitiesBgDrift {
       0% { background-position: 0 0, 0 0; }
@@ -178,7 +177,10 @@
         <a href="#expertise" class="text-editorial-muted hover:text-ink transition">Pillars</a>
         <a href="#experience" class="text-editorial-muted hover:text-ink transition">Experience</a>
         <a href="#about" class="text-editorial-muted hover:text-ink transition">About</a>
-        <a href="#contact" class="px-3 py-1.5 bg-vermilion hover:bg-vermilion-hover text-white rounded transition shadow-xs">Contact Direct</a>
+        <button onclick="toggleGeoCities()" class="px-2.5 py-1 bg-editorial-subtle hover:bg-editorial-border text-ink rounded border border-editorial-border transition flex items-center gap-1">
+          <span>🚀</span> <span id="navThemeText">1999 Mode</span>
+        </button>
+        <a href="#contact" class="px-3.5 py-1.5 bg-vermilion hover:bg-vermilion-hover text-white rounded transition shadow-xs">Contact Direct</a>
       </nav>
 
       <!-- Mobile Menu Toggle -->
@@ -193,6 +195,9 @@
       <a href="#expertise" onclick="toggleMobileMenu()" class="block py-1 text-ink">Pillars</a>
       <a href="#experience" onclick="toggleMobileMenu()" class="block py-1 text-ink">Experience</a>
       <a href="#about" onclick="toggleMobileMenu()" class="block py-1 text-ink">About</a>
+      <button onclick="toggleGeoCities(); toggleMobileMenu();" class="w-full py-2 bg-editorial-subtle text-ink rounded text-center border border-editorial-border">
+        🚀 Toggle 1999 GeoCities Mode
+      </button>
       <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 bg-vermilion text-white text-center rounded font-sans font-medium">Contact Direct</a>
     </div>
   </header>
@@ -202,8 +207,8 @@
     <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-4 md:pt-8 pb-6">
       <div class="md:col-span-7 space-y-5">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-forest-light border border-forest/20 rounded-full text-xs font-mono text-forest">
-          <span class="w-2 h-2 rounded-full bg-forest animate-pulse"></span>
-          <span>Available for Executive Leadership Roles</span>
+          <span class="text-forest font-bold">◆</span>
+          <span>Content Strategy, Communications, Editorial & AI</span>
         </div>
         
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-ink leading-[1.12] font-normal tracking-tight">
@@ -229,7 +234,7 @@
         <div class="bg-white p-3 rounded-lg border border-editorial-border shadow-xs space-y-3">
           <div id="heroPhotoContainer" onclick="handlePhotoClick()" class="aspect-[4/5] bg-ink rounded overflow-hidden relative group cursor-pointer transition-all duration-300" title="Click 3 times to unlock secret photo vault">
             
-            <!-- Camera Shutter Flash Overlay -->
+            <!-- Camera Flash Overlay -->
             <div id="cameraFlashOverlay" class="absolute inset-0 z-30 pointer-events-none hidden"></div>
 
             <img 
@@ -261,23 +266,24 @@
       </div>
     </section>
 
+    <!-- Personality-Infused Executive Stat Banner -->
     <section class="bg-ink text-paper rounded-lg p-6 md:p-8 shadow-sm">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-white/10">
-        <div class="pt-2 md:pt-0">
-          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">15+ Yrs</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Comms & Content</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+        <div class="pt-2 sm:pt-0">
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">15+ Years</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Content Strategy & Corporate Comms</p>
         </div>
-        <div class="pt-4 md:pt-0 md:pl-6">
-          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">200%</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Traffic Increase for Corp Site</p>
+        <div class="pt-4 sm:pt-0 sm:pl-6">
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">1 AI ChatBot</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Trained & Deployed on Enterprise IP</p>
         </div>
-        <div class="pt-4 md:pt-0 md:pl-6">
-          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">100+</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Assets Produced Per Year</p>
+        <div class="pt-4 sm:pt-0 sm:pl-6">
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">2 Kids & 1 Wife</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Co-Navigating Brooklyn Life</p>
         </div>
-        <div class="pt-4 md:pt-0 md:pl-6">
-          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">18+</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 uppercase tracking-wider">Business Units Aligned</p>
+        <div class="pt-4 sm:pt-0 sm:pl-6">
+          <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">3,000+ Miles</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Biked Annually on Electric Cargo Bike</p>
         </div>
       </div>
     </section>
@@ -296,7 +302,7 @@
           <span class="text-xs font-mono text-forest font-bold">01. EDITORIAL STRATEGY</span>
           <h3 class="text-xl font-serif text-ink font-normal">Content & Editorial Governance</h3>
           <p class="text-sm text-editorial-muted leading-relaxed">
-            Building cross-functional committees and channel playbooks that maintain a unified voice across newsletters, podcasts and events without operational friction.
+            Building cross-functional committees and channel playbooks that maintain a unified voice across newsletters, podcasts and web without operational friction.
           </p>
         </div>
         <div class="bg-paper p-6 md:p-8 space-y-3">
@@ -310,7 +316,7 @@
           <span class="text-xs font-mono text-forest font-bold">03. THOUGHT LEADERSHIP</span>
           <h3 class="text-xl font-serif text-ink font-normal">Benchmarking & Trend Insights</h3>
           <p class="text-sm text-editorial-muted leading-relaxed">
-            Converting complex data into definitive benchmarking frameworks that directly address C-suite executive priorities.
+            Converting complex data into definitive benchmarking frameworks and C-suite reports that directly address senior executive priorities.
           </p>
         </div>
       </div>
@@ -321,7 +327,7 @@
         <div>
           <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">TRACK RECORD</span>
           <h2 class="text-2xl font-serif text-ink mt-0.5">Selected Impact & Case Studies</h2>
-          <p class="text-xs font-mono text-editorial-muted mt-1">Click any card to inspect full operational details & portfolio visuals</p>
+          <p class="text-xs font-mono text-editorial-muted mt-1">Click any card to inspect full operational details & visual case study decks</p>
         </div>
 
         <!-- Filter Tabs -->
@@ -329,7 +335,7 @@
           <button onclick="filterCaseStudies('all')" id="tab-all" class="filter-btn px-3 py-1.5 bg-forest text-white rounded transition">All Projects</button>
           <button onclick="filterCaseStudies('ai')" id="tab-ai" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">AI & Infrastructure</button>
           <button onclick="filterCaseStudies('governance')" id="tab-governance" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">Global Governance</button>
-          <button onclick="filterCaseStudies('thought-leadership')" id="tab-thought-leadership" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">Thought Leadership & Content</button>
+          <button onclick="filterCaseStudies('thought-leadership')" id="tab-thought-leadership" class="filter-btn px-3 py-1.5 bg-editorial-subtle text-ink hover:bg-editorial-border rounded transition">Thought Leadership & Editorial</button>
         </div>
       </div>
 
@@ -401,14 +407,14 @@
           </div>
         </article>
 
-        <!-- Case Study 03: Events Strategy -->
-        <article data-category="thought-leadership" onclick="openModal('events')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+        <!-- Case Study 03: Editorial Committee -->
+        <article data-category="thought-leadership" onclick="openModal('editorial')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
           <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
             <div>
               <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
-                <span class="text-ochre font-bold">CASE STUDY 03</span> // EVENT CONTENT GOVERNANCE & KNOWLEDGE PIPELINE
+                <span class="text-ochre font-bold">CASE STUDY 03</span> // EDITORIAL GOVERNANCE & OPERATIONS
               </span>
-              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">Executive Event Strategy & Content Architecture</h3>
+              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">Editorial Committee & Content Infrastructure</h3>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society</span>
@@ -421,15 +427,15 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
               <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
-              <p>Live conference insights easily evaporate post-event without structured content governance to capture fleeting speaker storytelling.</p>
+              <p>Decentralized subject matter experts across the organization meant content pipelines stalled and the executive market voice grew inconsistent.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
               <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
-              <p>Mapped key event themes to a master content strategy, utilizing AI transcription on pre-calls and live sessions to transform raw conversation into standardized educational assets.</p>
+              <p>Built and chaired a cross-functional editorial committee, utilizing AI-assisted workflows to mine SME insights and produce standardized drafts in brand voice.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
               <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
-              <p>Eliminated post-event bottlenecks and <span class="editorial-highlighter">converted live speaker insights into tagged research modules</span> that permanently populated the member knowledge base.</p>
+              <p>Aligned every stakeholder group and <span class="editorial-highlighter">maintained quality and cadence across 100+ annual content assets</span>—newsletters, blogs, podcasts and research.</p>
             </div>
           </div>
         </article>
@@ -439,9 +445,9 @@
           <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
             <div>
               <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
-                <span class="text-ochre font-bold">CASE STUDY 04</span> // BENCHMARKING & RESEARCH
+                <span class="text-ochre font-bold">CASE STUDY 04</span> // BENCHMARKING & THOUGHT LEADERSHIP REPORTS
               </span>
-              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">Page Navigator: Benchmarking Survey & Trend Reports</h3>
+              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">Page Navigator: Benchmarking Survey & Executive Reports</h3>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society</span>
@@ -458,7 +464,7 @@
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
               <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
-              <p>Designed survey instruments, chaired insight committees and orchestrated a multi-channel global rollout and email campaign.</p>
+              <p>Designed survey instruments, chaired insight committees and orchestrated a multi-channel global rollout and executive email campaign.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
               <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
@@ -474,7 +480,7 @@
               <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
                 <span class="text-ochre font-bold">CASE STUDY 05</span> // MULTIMEDIA & AUDIO PRODUCTION
               </span>
-              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">Independent & Enterprise Podcast Production</h3>
+              <h3 class="text-xl md:text-2xl font-serif font-normal text-ink mt-1 group-hover:text-forest transition">Enterprise Podcast ("The New CCO") & Independent Series</h3>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society / Independent</span>
@@ -487,11 +493,11 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
               <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
-              <p>Required interactive media platforms to highlight complex industry insights without external agency budgets, building warm executive engagement.</p>
+              <p>Required interactive audio platforms to highlight complex industry insights without external agency budgets, building warm executive engagement.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
               <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
-              <p>Managed tip-to-tail production across both enterprise (Page Society) and independent podcast series (<em>The People You Meet in Old Town</em>): recorded, edited and directed analytics.</p>
+              <p>Managed tip-to-tail production across both enterprise (<em>The New CCO</em>) and independent podcast series (<em>The People You Meet in Old Town</em>): recorded, edited and directed analytics.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
               <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
@@ -501,57 +507,13 @@
 
           <!-- Embedded Audio Preview Container -->
           <div class="pt-2" onclick="event.stopPropagation()">
-            <p class="text-xs font-mono text-editorial-muted uppercase mb-2">Podcst Preview</p>
+            <p class="text-xs font-mono text-editorial-muted uppercase mb-2">Podcast Preview</p>
             <div class="w-full bg-paper p-3 rounded border border-editorial-border">
               <iframe style="border-radius:8px" src="https://open.spotify.com/embed/episode/59gsgKdiOTCy4BvT0pXg3T?" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
           </div>
         </article>
 
-      </div>
-    </section>
-
-    <section id="meta-build" class="p-6 md:p-8 bg-paper rounded border-2 border-forest/30 shadow-sm space-y-6 relative overflow-hidden">
-      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border pb-4">
-        <div>
-          <span class="text-xs font-mono text-forest font-bold uppercase tracking-wider flex items-center gap-2">
-            <i class="fa-solid fa-code text-ochre"></i> BEHIND THE BUILD // TANGIBLE GEN AI PROOF
-          </span>
-          <h2 class="text-2xl font-serif text-ink mt-1 font-normal">How This Website Was Built</h2>
-        </div>
-        <span class="text-xs font-mono px-3 py-1 bg-forest-light text-forest border border-forest/20 rounded">Hands-on AI Execution</span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
-        <div class="bg-white p-4 rounded border border-editorial-border">
-          <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-ochre">
-            <i class="fa-solid fa-lightbulb"></i> Philosophy & Context
-          </p>
-          <p>Rather than claiming AI fluency theoretically, I engineered this site and a live interactive design system card to demonstrate hands-on prompting.</p>
-        </div>
-        <div class="bg-white p-4 rounded border border-editorial-border">
-          <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-forest">
-            <i class="fa-solid fa-sliders"></i> Technical Architecture
-          </p>
-          <p>Synthesized core materials of CV, Portfolio and inspiration site. (H/T Eliot Mizrachi.) Used Claude and Gemini to develop, iterate, critique and walk me through uploading and troubleshooting. Designed and deployed in under 24 hours. </p>
-        </div>
-        <div class="bg-white p-4 rounded border border-editorial-border">
-          <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-forest">
-            <i class="fa-solid fa-terminal"></i> Tangible Deliverable
-          </p>
-          <p>Delivered an interactive, WCAG AAA-compliant specification card that serves as live proof of prompt engineering and front-end system execution.</p>
-        </div>
-      </div>
-
-      <div class="pt-2 border-t border-editorial-border flex flex-wrap items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-xs font-mono text-editorial-muted">
-          <i class="fa-solid fa-circle-check text-forest"></i>
-          <span>Includes WCAG AAA Contrast Inspector, Live Token Exporter & Font Scale Specimen</span>
-        </div>
-        <a href="design_system_card.html" target="_blank" class="px-4 py-2 bg-forest hover:bg-forest-hover text-white text-xs font-mono rounded transition flex items-center gap-2 shadow-xs">
-          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          <span>Launch Live Interactive Specification Card</span>
-        </a>
       </div>
     </section>
 
@@ -639,44 +601,121 @@
           I am a communications leader with over 15 years of experience building the strategy, systems and content that bridge the gap between what complex organizations know and what their audiences need to hear.
         </p>
         <p class="text-editorial-subtle text-sm leading-relaxed">
-          My approach relies on stripping away operational friction, partnering closely with subject matter experts and structuring data-driven narratives that ground complex institutional ideas in human reality—whether through executive communications, AI knowledge architecture, or global governance.
+          My approach relies on stripping away operational friction, partnering closely with subject matter experts and structuring data-driven narratives that ground complex institutional ideas in human reality—whether through corporate communications, AI knowledge architecture, or global governance.
         </p>
       </div>
     </section>
 
-    <section id="contact" class="p-6 md:p-10 bg-white rounded-lg border border-editorial-border space-y-8 shadow-xs">
-      <div class="space-y-2 max-w-xl">
-        <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">DIRECT CONTACT</span>
-        <h2 class="text-2xl md:text-3xl font-serif text-ink font-normal">Connect Direct</h2>
-        <p class="text-editorial-muted text-sm leading-relaxed">
-          Currently exploring in-house leadership roles in communications, brand strategy and digital transformation.
-        </p>
+    <!-- Meta / How This Website Was Built Section -->
+    <section id="meta-build" class="p-6 md:p-8 bg-diagonal-stripes rounded-lg border-2 border-forest/30 shadow-xs space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border pb-4">
+        <div>
+          <span class="text-xs font-mono text-forest font-bold uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-code text-ochre"></i> META // BEHIND THE BUILD
+          </span>
+          <h2 class="text-2xl font-serif text-ink mt-1 font-normal">How This Website Was Built</h2>
+        </div>
+        <span class="text-xs font-mono px-3 py-1 bg-forest-light text-forest border border-forest/20 rounded">Hands-on AI Execution Proof</span>
       </div>
 
-      <!-- Formspree Direct Form -->
-      <form action="https://formspree.io/f/mqernvqg" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
-        <div>
-          <label class="block text-xs font-mono text-editorial-muted mb-1 uppercase">YOUR NAME</label>
-          <input type="text" name="name" required class="w-full px-3.5 py-2.5 bg-paper border border-editorial-border rounded text-xs font-mono text-ink focus:outline-none focus:border-forest transition" placeholder="Max Fischer" />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
+        <div class="bg-white p-4 rounded border border-editorial-border shadow-xs">
+          <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-ochre">
+            <i class="fa-solid fa-lightbulb"></i> Philosophy & Context
+          </p>
+          <p>Rather than claiming AI fluency theoretically, I engineered this responsive site and an interactive design system card using natural language prompt engineering.</p>
         </div>
-        <div>
-          <label class="block text-xs font-mono text-editorial-muted mb-1 uppercase">EMAIL ADDRESS</label>
-          <input type="email" name="email" required class="w-full px-3.5 py-2.5 bg-paper border border-editorial-border rounded text-xs font-mono text-ink focus:outline-none focus:border-forest transition" placeholder="m.fischer@rushmore.edu" />
+        <div class="bg-white p-4 rounded border border-editorial-border shadow-xs">
+          <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-forest">
+            <i class="fa-solid fa-sliders"></i> Process & Collaboration
+          </p>
+          <p>Synthesized core CV materials and design inspiration. Partnered with Claude and Gemini to outline, critique, code and deploy the entire platform in under 24 hours.</p>
         </div>
-        <div class="sm:col-span-2">
-          <label class="block text-xs font-mono text-editorial-muted mb-1 uppercase">MESSAGE</label>
-          <textarea name="message" rows="4" required class="w-full px-3.5 py-2.5 bg-paper border border-editorial-border rounded text-xs font-mono text-ink focus:outline-none focus:border-forest transition" placeholder="Inquire regarding leadership roles or executive advisory..."></textarea>
+        <div class="bg-white p-4 rounded border border-editorial-border shadow-xs">
+          <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 flex items-center gap-1.5 text-forest">
+            <i class="fa-solid fa-terminal"></i> Tangible Deliverable
+          </p>
+          <p>Delivered a production-ready web platform and an interactive specification card demonstrating front-end design system execution.</p>
         </div>
-        <button type="submit" class="sm:col-span-2 py-3 bg-vermilion hover:bg-vermilion-hover text-white font-medium text-xs font-mono rounded transition shadow-xs flex items-center justify-center gap-2">
-          <span>Send Direct Email</span>
-          <i class="fa-solid fa-paper-plane text-[10px]"></i>
-        </button>
-      </form>
+      </div>
 
-      <div class="pt-4 border-t border-editorial-border flex flex-wrap justify-between text-xs font-mono text-editorial-muted gap-2">
-        <p>Email: <a href="mailto:jerrickh@gmail.com" class="text-ink underline">jerrickh@gmail.com</a></p>
-        <p>Phone: +1 646 715 7012</p>
-        <p>Location: Brooklyn, NY</p>
+      <div class="pt-2 border-t border-editorial-border flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-2 text-xs font-mono text-editorial-muted">
+          <i class="fa-solid fa-circle-check text-forest"></i>
+          <span>Built via Natural Language Prompting, Content Taxonomy Structuring & AI Workflow Systems</span>
+        </div>
+        <a href="design_system_card.html" target="_blank" class="px-4 py-2 bg-forest hover:bg-forest-hover text-white text-xs font-mono rounded transition flex items-center gap-2 shadow-xs">
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          <span>Launch Interactive Specification Card</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Redesigned Contact Section (2-Column Grid with Headshot) -->
+    <section id="contact" class="p-6 md:p-10 bg-white rounded-lg border border-editorial-border shadow-xs space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Column: Headshot & Profile Card -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="bg-paper p-3 rounded-lg border border-editorial-border shadow-xs space-y-3">
+            <div class="aspect-square bg-ink rounded overflow-hidden relative">
+              <img 
+                src="images/headshot.jpg" 
+                alt="Jerrick Haddad Executive Headshot" 
+                class="w-full h-full object-cover"
+                onerror="this.src='images/photo-1.jpg'" 
+              />
+            </div>
+            <div class="pt-1">
+              <span class="block font-serif text-lg text-ink font-normal">Jerrick Haddad</span>
+              <span class="text-xs font-mono text-editorial-muted">Director of Thought Leadership & Content Strategy</span>
+            </div>
+          </div>
+          
+          <div class="text-xs font-mono text-editorial-muted space-y-1 pt-2">
+            <p><i class="fa-solid fa-location-dot text-ochre mr-1"></i> Brooklyn, New York</p>
+            <p><i class="fa-solid fa-envelope text-forest mr-1"></i> <a href="mailto:jerrickh@gmail.com" class="text-ink underline">jerrickh@gmail.com</a></p>
+            <p><i class="fa-solid fa-phone text-editorial-muted mr-1"></i> +1 646 715 7012</p>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="md:col-span-7 space-y-6">
+          <div class="space-y-2">
+            <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">DIRECT CONTACT</span>
+            <h2 class="text-2xl md:text-3xl font-serif text-ink font-normal">Let's Connect</h2>
+            <p class="text-editorial-muted text-sm leading-relaxed">
+              Exploring executive leadership roles in communications, editorial strategy and digital transformation.
+            </p>
+          </div>
+
+          <!-- Inline AJAX Formspree Form -->
+          <form id="contactForm" action="https://formspree.io/f/mqernvqg" method="POST" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-editorial-muted mb-1 uppercase">YOUR NAME</label>
+                <input type="text" name="name" required class="w-full px-3.5 py-2.5 bg-paper border border-editorial-border rounded text-xs font-mono text-ink focus:outline-none focus:border-forest transition" placeholder="Max Fischer" />
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-editorial-muted mb-1 uppercase">EMAIL ADDRESS</label>
+                <input type="email" name="email" required class="w-full px-3.5 py-2.5 bg-paper border border-editorial-border rounded text-xs font-mono text-ink focus:outline-none focus:border-forest transition" placeholder="m.fischer@rushmore.edu" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-editorial-muted mb-1 uppercase">MESSAGE</label>
+              <textarea name="message" rows="4" required class="w-full px-3.5 py-2.5 bg-paper border border-editorial-border rounded text-xs font-mono text-ink focus:outline-none focus:border-forest transition" placeholder="Inquire regarding leadership roles or strategic advisory..."></textarea>
+            </div>
+            <button id="formSubmitBtn" type="submit" class="w-full py-3 bg-vermilion hover:bg-vermilion-hover text-white font-medium text-xs font-mono rounded transition shadow-xs flex items-center justify-center gap-2">
+              <span>Send Direct Message</span>
+              <i class="fa-solid fa-paper-plane text-[10px]"></i>
+            </button>
+          </form>
+
+          <div id="formStatusMsg" class="hidden p-3 bg-forest-light border border-forest/30 text-forest text-xs font-mono rounded text-center">
+            ✓ Message sent successfully! I will reply directly to your email shortly.
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -719,14 +758,22 @@
           </div>
         </div>
 
-        <!-- Portfolio Slide Placeholder Visual -->
+        <!-- Portfolio Visual Deck Specimen -->
         <div class="pt-4 border-t border-editorial-border">
-          <p class="text-xs font-mono text-editorial-muted uppercase mb-2">Executive Portfolio Visual Deck Specimen</p>
-          <div class="aspect-video bg-ink rounded border border-editorial-border flex flex-col items-center justify-center p-6 text-center text-paper relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-tr from-forest/30 via-transparent to-ochre/20"></div>
-            <i class="fa-solid fa-file-powerpoint text-3xl text-ochre mb-2 z-10"></i>
-            <p id="modalSlideTitle" class="font-serif text-lg z-10">Portfolio Slide Detail</p>
-            <p class="text-xs font-mono text-editorial-border mt-1 z-10">Source: Jerrick Haddad Strategic Portfolio (June 2026)</p>
+          <p class="text-xs font-mono text-editorial-muted uppercase mb-2">Strategic Portfolio Case Study Deck</p>
+          
+          <div class="aspect-video bg-ink rounded border border-editorial-border relative overflow-hidden flex flex-col items-center justify-center p-6 text-center text-paper">
+            <img 
+              id="modalSlideImg" 
+              src="" 
+              alt="Case Study Deck Preview" 
+              class="absolute inset-0 w-full h-full object-cover hidden"
+            />
+            <div id="modalFallbackSlide" class="space-y-2 z-10">
+              <i class="fa-solid fa-file-powerpoint text-3xl text-ochre"></i>
+              <p id="modalSlideTitle" class="font-serif text-lg">Portfolio Slide Detail</p>
+              <p class="text-xs font-mono text-editorial-border">Source: Jerrick Haddad Executive Portfolio (June 2026)</p>
+            </div>
           </div>
         </div>
 
@@ -751,7 +798,6 @@
         <i class="fa-solid fa-rocket text-ochre"></i>
         <span id="themeToggleText">GeoCities '99 Mode</span>
       </button>
-      <span>Glasgow Editorial Style</span>
     </div>
   </footer>
 
@@ -767,7 +813,8 @@
         context: "Managing an archived ecosystem of legacy research made discovery difficult for C-suite executive members. The organization required a modern system to surface deep institutional knowledge instantly.",
         contribution: "Directed a full website overhaul and taxonomy restructuring. Led the RFP process, content ingestion, prompt guardrail testing and response optimization for an enterprise chatbot trained on a decade of research.",
         result: "Deployed Artie, an AI-powered chatbot that seamlessly indexed enterprise IP, stripped away user friction and opened valuable new sponsorship opportunities.",
-        slideTitle: "Artie AI Chatbot — Architecture & Ingestion Flow"
+        slideTitle: "Artie AI Chatbot — Architecture & Ingestion Flow",
+        slideImg: "images/slide-artie.png"
       },
       cemex: {
         category: "CASE STUDY 02 // GLOBAL GOVERNANCE & MARKETING",
@@ -776,34 +823,38 @@
         context: "Rigid corporate mandates alienate regional teams, while total decentralization risks fracturing brand narrative across international business units.",
         contribution: "Engineered a marketing governance framework balancing central alignment with local execution. Created localized content playbooks and trained regional comms managers in 20+ countries.",
         result: "Unified digital presence across 4 languages and 20,000+ customers. Documented as a premier strategic industry case study for an enterprise partner webinar.",
-        slideTitle: "CEMEX Global-to-Local Social Strategy Framework"
+        slideTitle: "CEMEX Global-to-Local Social Strategy Framework",
+        slideImg: "images/slide-cemex.png"
       },
-      events: {
-        category: "CASE STUDY 03 // EVENT CONTENT GOVERNANCE",
-        title: "Executive Event Strategy & Content Pipeline",
+      editorial: {
+        category: "CASE STUDY 03 // EDITORIAL GOVERNANCE & OPERATIONS",
+        title: "Editorial Committee & Content Infrastructure",
         org: "Page Society",
-        context: "Live conference insights easily evaporate post-event without structured content governance to capture fleeting speaker storytelling.",
-        contribution: "Mapped key event themes to a master content strategy, utilizing AI transcription on pre-calls and live sessions to transform raw conversation into standardized educational assets.",
-        result: "Closed the loop between strategy and distribution, eliminating post-event administrative bottlenecks and converting speaker insights into permanent member research modules.",
-        slideTitle: "Events Strategy & Content Processing Architecture"
+        context: "Decentralized subject matter experts across the organization meant content pipelines stalled and the executive market voice grew inconsistent.",
+        contribution: "Built and chaired a cross-functional editorial committee, recording SME sessions and using AI-assisted workflows to generate standardized drafts in brand voice.",
+        result: "Aligned every stakeholder group and maintained quality and cadence across a 100+ annual content output—newsletters, blogs, podcasts and research.",
+        slideTitle: "Editorial Governance & Content Pipeline Framework",
+        slideImg: "images/slide-editorial.png"
       },
       benchmarking: {
-        category: "CASE STUDY 04 // BENCHMARKING & RESEARCH",
-        title: "Page Navigator: Benchmarking Survey & Trend Reports",
+        category: "CASE STUDY 04 // BENCHMARKING & THOUGHT LEADERSHIP",
+        title: "Page Navigator: Benchmarking Survey & Executive Reports",
         org: "Page Society",
         context: "Fortune 500 CCOs needed actionable benchmarks on rapid corporate shifts; traditional market data was too slow or dense for executive decision-making.",
-        contribution: "Designed survey instruments, chaired insight committees and orchestrated a multi-channel global rollout and email campaign.",
+        contribution: "Designed survey instruments, chaired insight committees and orchestrated a multi-channel global rollout and executive email campaign.",
         result: "Converted raw input into primary insights for 1,400 executive members reached, exceeding targets with a 75%+ member download rate.",
-        slideTitle: "Page Navigator Survey Instrument & Executive Report"
+        slideTitle: "Page Navigator Survey Instrument & Executive Report",
+        slideImg: "images/slide-benchmarking.png"
       },
       podcasts: {
         category: "CASE STUDY 05 // MULTIMEDIA & AUDIO PRODUCTION",
-        title: "Independent & Enterprise Podcast Production",
+        title: 'Enterprise Podcast ("The New CCO") & Independent Series',
         org: "Page Society / Independent",
-        context: "Required interactive media platforms to highlight complex industry insights without external agency budgets, building warm executive engagement.",
-        contribution: "Managed tip-to-tail production across both enterprise (Page Society) and independent podcast series (The People You Meet in Old Town): recorded, edited and directed analytics.",
+        context: "Required interactive audio platforms to highlight complex industry insights without external agency budgets, building warm executive engagement.",
+        contribution: "Managed tip-to-tail production across both enterprise (The New CCO) and independent podcast series (The People You Meet in Old Town): recorded, edited and directed analytics.",
         result: "Delivered 12 strategic episodes annually at zero external agency cost, cultivating an active listener and member pipeline.",
-        slideTitle: "Podcast Audio Pipeline & Listener Analytics"
+        slideTitle: "Podcast Audio Pipeline & Listener Analytics",
+        slideImg: "images/slide-podcasts.png"
       }
     };
 
@@ -819,6 +870,24 @@
       document.getElementById('modalResult').textContent = data.result;
       document.getElementById('modalSlideTitle').textContent = data.slideTitle;
 
+      const slideImg = document.getElementById('modalSlideImg');
+      const fallbackSlide = document.getElementById('modalFallbackSlide');
+
+      if (data.slideImg) {
+        slideImg.src = data.slideImg;
+        slideImg.onerror = function() {
+          slideImg.classList.add('hidden');
+          fallbackSlide.classList.remove('hidden');
+        };
+        slideImg.onload = function() {
+          slideImg.classList.remove('hidden');
+          fallbackSlide.classList.add('hidden');
+        };
+      } else {
+        slideImg.classList.add('hidden');
+        fallbackSlide.classList.remove('hidden');
+      }
+
       document.getElementById('caseStudyModal').classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
@@ -828,7 +897,7 @@
       document.body.style.overflow = 'auto';
     }
 
-    // Secret Photo Frame Easter Egg
+    // Secret Photo Frame Easter Egg (Silly Family Photo)
     let photoClickCount = 0;
     function handlePhotoClick() {
       photoClickCount++;
@@ -850,19 +919,56 @@
 
         if (photoContainer) photoContainer.classList.add('ring-2', 'ring-ochre', 'shadow-lg');
         if (photoBadge) photoBadge.className = "absolute top-3 left-3 bg-ochre text-white px-2.5 py-1 rounded text-[10px] font-mono uppercase tracking-wider font-bold shadow-md flex items-center gap-1.5 animate-bounce z-20";
-        if (badgeText) badgeText.textContent = "📸 Archival Vault Unlocked";
+        if (badgeText) badgeText.textContent = "🎉 Silly Family Photo Unlocked!";
 
         photoEl.style.opacity = '0';
         setTimeout(() => {
-          photoEl.src = "images/photo-3.jpg";
-          document.getElementById('photoTitle').textContent = "Glasgow Esplanade Leap — Vault Edition";
-          document.getElementById('photoLocation').textContent = "Glasgow, Scotland • Shot by Jerrick";
-          document.getElementById('photoCounter').textContent = "VAULT 01";
+          photoEl.src = "images/photo-family.jpg";
+          photoEl.onerror = function() { photoEl.src = "images/photo-family.jpg"; };
+          document.getElementById('photoTitle').textContent = "Family Photo — Vault Edition";
+          document.getElementById('photoLocation').textContent = "Adirondacks • Family Vault";
+          document.getElementById('photoCounter').textContent = "FAMILY 01";
           photoEl.style.opacity = '1';
         }, 150);
 
         photoClickCount = 0;
       }
+    }
+
+    // Dynamic Photography Frame Rotator & Counter
+    const photos = [
+      { url: "images/photo-1.jpg", title: "Modernist Geometry", loc: "Brooklyn, NY" },
+      { url: "images/photo-2.jpg", title: "Lakeside Waves", loc: "Upstate NY" },
+      { url: "images/photo-3.jpg", title: "Glasgow Esplanade", loc: "Glasgow, Scotland" },
+      { url: "images/photo-4.jpg", title: "East River Sail", loc: "New York, NY" }
+    ];
+    let currentPhotoIdx = 0;
+
+    function updatePhoto() {
+      const photoEl = document.getElementById('heroPhoto');
+      photoEl.style.opacity = '0';
+      setTimeout(() => {
+        photoEl.src = photos[currentPhotoIdx].url;
+        document.getElementById('photoTitle').textContent = photos[currentPhotoIdx].title;
+        document.getElementById('photoLocation').textContent = photos[currentPhotoIdx].loc;
+        
+        // Dynamically compute counter
+        const currentStr = String(currentPhotoIdx + 1).padStart(2, '0');
+        const totalStr = String(photos.length).padStart(2, '0');
+        document.getElementById('photoCounter').textContent = `${currentStr} / ${totalStr}`;
+        
+        photoEl.style.opacity = '1';
+      }, 200);
+    }
+
+    function nextPhoto() {
+      currentPhotoIdx = (currentPhotoIdx + 1) % photos.length;
+      updatePhoto();
+    }
+
+    function prevPhoto() {
+      currentPhotoIdx = (currentPhotoIdx - 1 + photos.length) % photos.length;
+      updatePhoto();
     }
 
     // Scroll Progress Bar
@@ -877,36 +983,6 @@
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
       menu.classList.toggle('hidden');
-    }
-
-    // Photography Frame Rotator
-    const photos = [
-     { url: "images/photo-1.jpg", title: "Modernist Geometry", loc: "Brooklyn, NY", num: "01 / 04" },
-     { url: "images/photo-2.jpg", title: "Lakeside Waves", loc: "Upstate NY", num: "02 / 04" },
-     { url: "images/photo-3.jpg", title: "Glasgow Esplanade", loc: "Glasgow, Scotland", num: "03 / 04" },
-     { url: "images/photo-4.jpg", title: "East River Sail", loc: "New York, NY", num: "04 / 04" }
-   ];
-    let currentPhotoIdx = 0;
-    function updatePhoto() {
-      const photoEl = document.getElementById('heroPhoto');
-      photoEl.style.opacity = '0';
-      setTimeout(() => {
-        photoEl.src = photos[currentPhotoIdx].url;
-        document.getElementById('photoTitle').textContent = photos[currentPhotoIdx].title;
-        document.getElementById('photoLocation').textContent = photos[currentPhotoIdx].loc;
-        document.getElementById('photoCounter').textContent = photos[currentPhotoIdx].num;
-        photoEl.style.opacity = '1';
-      }, 200);
-    }
-
-    function nextPhoto() {
-      currentPhotoIdx = (currentPhotoIdx + 1) % photos.length;
-      updatePhoto();
-    }
-
-    function prevPhoto() {
-      currentPhotoIdx = (currentPhotoIdx - 1 + photos.length) % photos.length;
-      updatePhoto();
     }
 
     // Category Filter
@@ -951,14 +1027,52 @@
       document.body.classList.toggle('geocities-mode');
       const marquee = document.getElementById('geocitiesMarquee');
       const label = document.getElementById('themeToggleText');
+      const navLabel = document.getElementById('navThemeText');
       
       if (document.body.classList.contains('geocities-mode')) {
         marquee.classList.remove('hidden');
-        label.textContent = "Exit 1999 GeoCities 🚀";
+        if (label) label.textContent = "Exit 1999 Mode 🚀";
+        if (navLabel) navLabel.textContent = "Exit 1999";
       } else {
         marquee.classList.add('hidden');
-        label.textContent = "GeoCities '99 Mode";
+        if (label) label.textContent = "GeoCities '99 Mode";
+        if (navLabel) navLabel.textContent = "1999 Mode";
       }
+    }
+
+    // AJAX Formspree Handler
+    const contactForm = document.getElementById('contactForm');
+    const formSubmitBtn = document.getElementById('formSubmitBtn');
+    const formStatusMsg = document.getElementById('formStatusMsg');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        formSubmitBtn.disabled = true;
+        formSubmitBtn.innerHTML = '<span>Sending Message...</span> <i class="fa-solid fa-spinner animate-spin text-[10px]"></i>';
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            contactForm.reset();
+            contactForm.classList.add('hidden');
+            formStatusMsg.classList.remove('hidden');
+          } else {
+            alert('Oops! There was a problem submitting your form. Please try again or email directly.');
+            formSubmitBtn.disabled = false;
+            formSubmitBtn.innerHTML = '<span>Send Direct Message</span> <i class="fa-solid fa-paper-plane text-[10px]"></i>';
+          }
+        } catch (error) {
+          alert('Oops! Network error. Please try again or email directly.');
+          formSubmitBtn.disabled = false;
+          formSubmitBtn.innerHTML = '<span>Send Direct Message</span> <i class="fa-solid fa-paper-plane text-[10px]"></i>';
+        }
+      });
     }
   </script>
 
