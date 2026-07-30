@@ -93,17 +93,29 @@
       border-radius: 2px;
     }
     /* How this site was built background */
+  
+    .editorial-double-border { border-top: 3px double #1A1918; }
+    .editorial-highlighter {
+      background-image: linear-gradient(rgba(242, 211, 138, 0.75), rgba(242, 211, 138, 0.75));
+      background-repeat: no-repeat;
+      background-size: 100% 88%;
+      background-position: 0 60%;
+      padding: 0.05em 0.2em;
+      border-radius: 2px;
+    }
+    
+    /* Fine Chevron Zigzag Pattern (Matching Reference Image at Micro Scale) */
     .bg-herringbone {
-  background-color: #FAF8F5;
-  background-image: 
-    linear-gradient(135deg, #E5E0D8 25%, transparent 25%), 
-    linear-gradient(225deg, #E5E0D8 25%, transparent 25%), 
-    linear-gradient(45deg, #E5E0D8 25%, transparent 25%), 
-    linear-gradient(315deg, #E5E0D8 25%, transparent 25%);
-  background-position: 8px 0, 8px 0, 0 0, 0 0;
-  background-size: 8px 8px;
-  background-repeat: repeat;
-}
+      background-color: #FAF8F5;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M0 5 L5 0 L10 5' fill='none' stroke='%23E5E0D8' stroke-width='1'/%3E%3Cpath d='M0 10 L5 5 L10 10' fill='none' stroke='%23E5E0D8' stroke-width='1'/%3E%3C/svg%3E");
+      background-size: 10px 10px;
+    }
+    
+    /* Camera Flash Animation for Secret Photo Frame */
+    @keyframes cameraFlash {
+      0% { opacity: 0.95; background-color: #ffffff; }
+      100% { opacity: 0; background-color: transparent; }
+    }
     /* Subtle Diagonal Pattern for Meta Section */
     .bg-diagonal-stripes {
       background-color: #FAF8F5;
@@ -618,7 +630,7 @@
     </section>
 
     <!-- Meta / How This Website Was Built Section -->
-    <section id="meta-build" class="p-6 md:p-8 bg-herringbone rounded-lg border-2 border-forest/30 shadow-xs space-y-6">
+    <<section id="meta-build" class="p-6 md:p-8 bg-herringbone rounded-lg border-2 border-forest/30 shadow-xs space-y-6">
       <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border pb-4">
         <div>
           <span class="text-xs font-mono text-forest font-bold uppercase tracking-wider flex items-center gap-2">
