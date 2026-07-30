@@ -105,10 +105,23 @@
     }
     
     /* Fine Chevron Zigzag Pattern (Matching Reference Image at Micro Scale) */
-    .bg-herringbone {
+  .bg-herringbone {
+      position: relative;
       background-color: #FAF8F5;
+      overflow: hidden;
+    }
+    .bg-herringbone::before {
+      content: "";
+      position: absolute;
+      inset: -100%;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M0 5 L5 0 L10 5' fill='none' stroke='%23E5E0D8' stroke-width='1'/%3E%3Cpath d='M0 10 L5 5 L10 10' fill='none' stroke='%23E5E0D8' stroke-width='1'/%3E%3C/svg%3E");
       background-size: 10px 10px;
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+    .bg-herringbone > * {
+      position: relative;
+      z-index: 10;
     }
     
     /* Camera Flash Animation for Secret Photo Frame */
@@ -298,7 +311,7 @@
         </div>
         <div class="pt-4 sm:pt-0 sm:pl-6">
           <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">1 AI ChatBot</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Trained & Deployed on Enterprise IP</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Trained & Deployed </p>
         </div>
         <div class="pt-4 sm:pt-0 sm:pl-6">
           <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">2 Kids & 1 Wife</p>
@@ -306,7 +319,7 @@
         </div>
         <div class="pt-4 sm:pt-0 sm:pl-6">
           <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">3,000+ Miles</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Biked Annually on Electric Cargo Bike</p>
+          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Biked Annually on Cargo Bike</p>
         </div>
       </div>
     </section>
