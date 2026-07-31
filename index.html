@@ -92,20 +92,9 @@
       padding: 0.05em 0.2em;
       border-radius: 2px;
     }
-    /* How this site was built background */
-  
-    .editorial-double-border { border-top: 3px double #1A1918; }
-    .editorial-highlighter {
-      background-image: linear-gradient(rgba(242, 211, 138, 0.75), rgba(242, 211, 138, 0.75));
-      background-repeat: no-repeat;
-      background-size: 100% 88%;
-      background-position: 0 60%;
-      padding: 0.05em 0.2em;
-      border-radius: 2px;
-    }
     
-    /* Fine Chevron Zigzag Pattern (Matching Reference Image at Micro Scale) */
-  .bg-herringbone {
+    /* Fine Chevron Zigzag Pattern (Angled at 45 Degrees) */
+    .bg-herringbone {
       position: relative;
       background-color: #FAF8F5;
       overflow: hidden;
@@ -122,17 +111,6 @@
     .bg-herringbone > * {
       position: relative;
       z-index: 10;
-    }
-    
-    /* Camera Flash Animation for Secret Photo Frame */
-    @keyframes cameraFlash {
-      0% { opacity: 0.95; background-color: #ffffff; }
-      100% { opacity: 0; background-color: transparent; }
-    }
-    /* Subtle Diagonal Pattern for Meta Section */
-    .bg-diagonal-stripes {
-      background-color: #FAF8F5;
-      background-image: repeating-linear-gradient(45deg, #F2EFE9 0, #F2EFE9 1px, transparent 0, transparent 50px);
     }
     
     /* Camera Flash Animation for Secret Photo Frame */
@@ -293,16 +271,15 @@
           
           <div class="flex items-center justify-between text-xs font-mono pt-1">
             <div>
-              <span id="photoTitle" class="block font-semibold text-ink">Top Nine</span>
+              <span id="photoTitle" class="block font-semibold text-ink">Modernist Geometry</span>
               <span id="photoLocation" class="text-[10px] text-editorial-muted">Brooklyn, NY</span>
             </div>
-            <span id="photoCounter" class="text-[10px] text-ochre font-bold">01 / 04</span>
+            <span id="photoCounter" class="text-[10px] text-ochre font-bold">01 / 05</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Personality-Infused Executive Stat Banner -->
     <section class="bg-ink text-paper rounded-lg p-6 md:p-8 shadow-sm">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left divide-y sm:divide-y-0 sm:divide-x divide-white/10">
         <div class="pt-2 sm:pt-0">
@@ -311,7 +288,7 @@
         </div>
         <div class="pt-4 sm:pt-0 sm:pl-6">
           <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">1 AI ChatBot</p>
-          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Trained & Deployed </p>
+          <p class="text-xs font-mono text-editorial-border mt-1 leading-relaxed">Trained & Deployed</p>
         </div>
         <div class="pt-4 sm:pt-0 sm:pl-6">
           <p class="text-3xl md:text-4xl font-serif text-ochre font-medium">2 Kids</p>
@@ -363,7 +340,7 @@
         <div>
           <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">TRACK RECORD</span>
           <h2 class="text-2xl font-serif text-ink mt-0.5">Selected Impact & Case Studies</h2>
-          <p class="text-xs font-mono text-editorial-muted mt-1">Click any card to inspect full operational details & visual case study decks</p>
+          <p class="text-xs font-mono text-editorial-muted mt-1">Click any card to inspect strategic architecture & portfolio deck visuals</p>
         </div>
 
         <!-- Filter Tabs -->
@@ -377,8 +354,8 @@
 
       <div class="space-y-8">
 
-        <!-- Case Study 01: Artie AI -->
-        <article data-category="ai" onclick="openModal('artie')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+        <!-- Case Study 01: Artie AI (Reframed for Strategic Leadership) -->
+        <article data-category="ai" onclick="openModal('artie')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition-all duration-300 space-y-6 cursor-pointer group">
           <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
             <div>
               <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
@@ -389,29 +366,29 @@
             <div class="flex items-center gap-2">
               <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society</span>
               <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
-                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <span>Inspect Architecture</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </span>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
-              <p>Managing an archived ecosystem of legacy research made discovery difficult for executive users. The organization required a modern system to surface institutional knowledge instantly.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Strategic Diagnosis</p>
+              <p>Diagnosed discovery friction across 10+ years of archived research, identifying an opportunity to convert static IP into an interactive executive utility.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
-              <p>Directed a full website overhaul and taxonomy restructuring. Led the RFP process, content ingestion, prompt guardrail testing and response optimization for an enterprise chatbot.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Solution Architecture & Leadership</p>
+              <p>Defined technical specifications, guardrails, and taxonomy overhaul. Governed prompt engineering, vendor RFP selection, and enterprise LLM ingestion.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
-              <p>Deployed Artie, an AI chatbot that <span class="editorial-highlighter">indexed enterprise IP, cut user friction and opened valuable new sponsorship opportunities</span>.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Business Outcome & Impact</p>
+              <p>Engineered & deployed Artie, an AI chatbot that <span class="editorial-highlighter">indexed enterprise IP, eliminated member friction, and generated net-new sponsorship revenue</span>.</p>
             </div>
           </div>
         </article>
 
-        <!-- Case Study 02: CEMEX -->
-        <article data-category="governance" onclick="openModal('cemex')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+        <!-- Case Study 02: CEMEX (Reframed for Strategic Leadership) -->
+        <article data-category="governance" onclick="openModal('cemex')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition-all duration-300 space-y-6 cursor-pointer group">
           <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
             <div>
               <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
@@ -422,29 +399,29 @@
             <div class="flex items-center gap-2">
               <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">CEMEX (Global)</span>
               <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
-                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <span>Inspect Governance</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </span>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
-              <p>Rigid corporate mandates alienate regional teams, while total decentralization risks fracturing brand narrative across international business units.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Strategic Diagnosis</p>
+              <p>Identified structural tension between central corporate mandates and regional autonomy across 20+ countries, threatening global narrative cohesion.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
-              <p>Engineered a marketing governance framework balancing central alignment with local execution. Created localized content playbooks and trained comms managers in 20+ countries.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Solution Architecture & Leadership</p>
+              <p>Architected a global-to-local marketing governance model. Developed localized editorial playbooks and trained regional comms leads across 4 languages.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
-              <p>Unified digital presence across 4 languages and 20,000+ customers. <span class="editorial-highlighter">Documented as a premier strategic industry case study</span>.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Business Outcome & Impact</p>
+              <p>Unified digital presence for 20,000+ enterprise clients; strategy was <span class="editorial-highlighter">documented & published as a industry benchmark case study</span>.</p>
             </div>
           </div>
         </article>
 
-        <!-- Case Study 03: Editorial Committee -->
-        <article data-category="thought-leadership" onclick="openModal('editorial')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+        <!-- Case Study 03: Editorial Committee (Reframed for Strategic Leadership) -->
+        <article data-category="thought-leadership" onclick="openModal('editorial')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition-all duration-300 space-y-6 cursor-pointer group">
           <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
             <div>
               <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
@@ -455,29 +432,29 @@
             <div class="flex items-center gap-2">
               <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society</span>
               <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
-                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <span>Inspect Pipeline</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </span>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
-              <p>Decentralized subject matter experts across the organization meant content pipelines stalled and the executive market voice grew inconsistent.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Strategic Diagnosis</p>
+              <p>Recognized that fragmented subject matter expertise was causing content bottlenecks, inconsistent market voice, and lost executive insights.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
-              <p>Built and chaired a cross-functional editorial committee, utilizing AI-assisted workflows to mine SME insights and produce standardized drafts in brand voice.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Solution Architecture & Leadership</p>
+              <p>Conceived and chaired a cross-functional Editorial Committee. Designed AI-assisted SME intake pipelines to convert interviews into standardized publication assets.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
-              <p>Aligned every stakeholder group and <span class="editorial-highlighter">maintained quality and cadence across 100+ annual content assets</span>—newsletters, blogs, podcasts and research.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Business Outcome & Impact</p>
+              <p>Aligned every stakeholder group and <span class="editorial-highlighter">maintained quality & cadence across 100+ annual content assets</span>—newsletters, blogs, podcasts and research.</p>
             </div>
           </div>
         </article>
 
-        <!-- Case Study 04: Page Navigator -->
-        <article data-category="thought-leadership" onclick="openModal('benchmarking')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+        <!-- Case Study 04: Page Navigator (Reframed for Strategic Leadership) -->
+        <article data-category="thought-leadership" onclick="openModal('benchmarking')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition-all duration-300 space-y-6 cursor-pointer group">
           <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
             <div>
               <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
@@ -488,29 +465,29 @@
             <div class="flex items-center gap-2">
               <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society</span>
               <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
-                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <span>Inspect Benchmarks</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </span>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
-              <p>Enterprise leaders needed actionable benchmarks on rapid corporate shifts; traditional market data was too slow or dense for executive decision-making.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Strategic Diagnosis</p>
+              <p>Surfaced an unaddressed C-suite need for rapid corporate benchmarking during market volatility, bypassing slow traditional research agencies.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
-              <p>Designed survey instruments, chaired insight committees and orchestrated a multi-channel global rollout and executive email campaign.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Solution Architecture & Leadership</p>
+              <p>Pioneered the Page Navigator framework. Designed survey instruments, chaired insight committees, and orchestrated global multi-channel rollouts.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
-              <p>Converted raw input into primary insights for 1,400 executive members reached, <span class="editorial-highlighter">exceeding targets with a 75%+ member download rate</span>.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Business Outcome & Impact</p>
+              <p>Delivered primary insights to 1,400+ CCOs and CMOs, <span class="editorial-highlighter">achieving an unprecedented 75%+ member download rate</span>.</p>
             </div>
           </div>
         </article>
 
-        <!-- Case Study 05: Podcast Production -->
-        <article data-category="thought-leadership" onclick="openModal('podcasts')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition space-y-6 cursor-pointer group">
+        <!-- Case Study 05: Podcast Production (Reframed for Strategic Leadership) -->
+        <article data-category="thought-leadership" onclick="openModal('podcasts')" class="case-study-card p-6 md:p-8 bg-white rounded border border-editorial-border shadow-sm hover:border-forest transition-all duration-300 space-y-6 cursor-pointer group">
           <div class="flex flex-wrap items-center justify-between gap-3 border-b border-editorial-border/60 pb-4">
             <div>
               <span class="text-xs font-mono text-editorial-muted uppercase tracking-wider flex items-center gap-2">
@@ -521,23 +498,23 @@
             <div class="flex items-center gap-2">
               <span class="text-xs font-mono px-3 py-1 bg-editorial-subtle text-ink rounded">Page Society / Independent</span>
               <span class="text-xs font-mono text-forest font-bold group-hover:underline flex items-center gap-1">
-                <span>Inspect Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <span>Inspect Audio Pipeline</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
               </span>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink/80 leading-relaxed">
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Context</p>
-              <p>Required interactive audio platforms to highlight complex industry insights without external agency budgets, building warm executive engagement and unique format for content.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-ochre">◆ Strategic Diagnosis</p>
+              <p>Identified a gap in warm executive engagement and audio thought leadership that written reports could not replicate.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Tactical Contribution</p>
-              <p>Managed entire production across enterprise for <em>The New CCO</em> and edited independent podcast series (<em>The People You Meet in Old Town</em>).</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Solution Architecture & Leadership</p>
+              <p>Architected end-to-end audio strategy for enterprise (<em>The New CCO</em>) and independent series (<em>The People You Meet in Old Town</em>), defining positioning and in-house pipelines.</p>
             </div>
             <div class="bg-paper p-4 rounded border border-editorial-border/80">
-              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Real-World Result</p>
-              <p>Delivered 12 strategic episodes annually at <span class="editorial-highlighter">zero external agency cost</span>, cultivating an active listener and member pipeline.</p>
+              <p class="font-semibold text-ink text-xs font-mono uppercase tracking-wider mb-2 text-forest">◆ Business Outcome & Impact</p>
+              <p>Delivered 12 strategic episodes annually at <span class="editorial-highlighter">zero external agency cost</span>, cultivating an active listener and executive member pipeline.</p>
             </div>
           </div>
 
@@ -687,7 +664,6 @@
       </div>
     </section>
 
-    <!-- Redesigned Contact Section (2-Column Grid with Headshot) -->
     <section id="contact" class="p-6 md:p-10 bg-white rounded-lg border border-editorial-border shadow-xs space-y-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         
@@ -696,10 +672,10 @@
           <div class="bg-paper p-3 rounded-lg border border-editorial-border shadow-xs space-y-3">
             <div class="aspect-square bg-ink rounded overflow-hidden relative">
               <img 
-  src="images/headshot.jpg" 
-  alt="Jerrick Haddad Executive Headshot" 
-  class="w-full h-full object-cover filter grayscale sepia-[0.25] contrast-120"
-/>
+                src="images/headshot.jpg" 
+                alt="Jerrick Haddad Executive Headshot" 
+                class="w-full h-full object-cover filter grayscale sepia-[0.25] contrast-120"
+              />
             </div>
             <div class="pt-1">
               <span class="block font-serif text-lg text-ink font-normal">Jerrick Haddad</span>
@@ -720,7 +696,7 @@
             <span class="text-xs font-mono text-ochre font-bold uppercase tracking-widest">DIRECT CONTACT</span>
             <h2 class="text-2xl md:text-3xl font-serif text-ink font-normal">Let's Connect</h2>
             <p class="text-editorial-muted text-sm leading-relaxed">
-              Let's talk!  
+              Let's talk!
             </p>
           </div>
 
@@ -756,7 +732,6 @@
 
   </main>
 
-  <!-- Interactive Modal Detail Drawer -->
   <div id="caseStudyModal" class="fixed inset-0 z-50 bg-ink/70 backdrop-blur-sm hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto" onclick="closeModal()">
     <div class="bg-paper max-w-3xl w-full rounded-lg border border-editorial-border shadow-2xl overflow-hidden relative my-8" onclick="event.stopPropagation()">
       
@@ -778,17 +753,17 @@
         <!-- Extended Narrative Grid -->
         <div class="space-y-4">
           <div class="bg-white p-4 rounded border border-editorial-border">
-            <h4 class="font-mono text-xs font-bold text-ochre uppercase tracking-wider mb-2">◆ The Challenge & Organizational Context</h4>
+            <h4 class="font-mono text-xs font-bold text-ochre uppercase tracking-wider mb-2">◆ Strategic Diagnosis</h4>
             <p id="modalContext" class="text-editorial-muted">Context description...</p>
           </div>
 
           <div class="bg-white p-4 rounded border border-editorial-border">
-            <h4 class="font-mono text-xs font-bold text-forest uppercase tracking-wider mb-2">◆ Specific Tactical Contribution</h4>
+            <h4 class="font-mono text-xs font-bold text-forest uppercase tracking-wider mb-2">◆ Solution Architecture & Leadership</h4>
             <p id="modalContribution" class="text-editorial-muted">Contribution description...</p>
           </div>
 
           <div class="bg-white p-4 rounded border border-editorial-border">
-            <h4 class="font-mono text-xs font-bold text-forest uppercase tracking-wider mb-2">◆ Real-World Measurable Result</h4>
+            <h4 class="font-mono text-xs font-bold text-forest uppercase tracking-wider mb-2">◆ Business Outcome & Impact</h4>
             <p id="modalResult" class="text-ink font-medium">Result description...</p>
           </div>
         </div>
@@ -839,15 +814,15 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Modal Case Study Data
+    // Modal Case Study Data (Reframed for Senior Leadership & Strategy)
     const caseStudyData = {
       artie: {
         category: "CASE STUDY 01 // AI INTEGRATION & KNOWLEDGE ARCHITECTURE",
         title: '"Artie" AI Knowledge Base Chatbot',
         org: "Page Society",
-        context: "Managing an archived ecosystem of legacy research made discovery difficult for C-suite executive members. The organization required a modern system to surface deep institutional knowledge instantly.",
-        contribution: "Directed a full website overhaul and taxonomy restructuring. Led the RFP process, content ingestion, prompt guardrail testing and response optimization for an enterprise chatbot trained on a decade of research.",
-        result: "Deployed Artie, an AI-powered chatbot that seamlessly indexed enterprise IP, stripped away user friction and opened valuable new sponsorship opportunities.",
+        context: "Diagnosed critical discovery bottlenecks in a 10+ year legacy research archive, identifying an opportunity to convert static enterprise IP into an interactive executive tool.",
+        contribution: "Defined technical specifications, guardrails, and taxonomy architecture. Governed prompt engineering, vendor RFP selection, and enterprise LLM ingestion.",
+        result: "Engineered & launched 'Artie', an AI chatbot that indexed enterprise IP, eliminated member friction, and generated net-new corporate sponsorship revenue streams.",
         slideTitle: "Artie AI Chatbot — Architecture & Ingestion Flow",
         slideImg: "images/slide-artie.png"
       },
@@ -855,9 +830,9 @@
         category: "CASE STUDY 02 // GLOBAL GOVERNANCE & MARKETING",
         title: "CEMEX Global Digital Architecture",
         org: "CEMEX (Global across 20+ countries)",
-        context: "Rigid corporate mandates alienate regional teams, while total decentralization risks fracturing brand narrative across international business units.",
-        contribution: "Engineered a marketing governance framework balancing central alignment with local execution. Created localized content playbooks and trained regional comms managers in 20+ countries.",
-        result: "Unified digital presence across 4 languages and 20,000+ customers. Documented as a premier strategic industry case study for an enterprise partner webinar.",
+        context: "Identified structural tension between central corporate mandates and regional autonomy across 20+ global markets, threatening brand narrative cohesion.",
+        contribution: "Architected a global-to-local marketing governance model. Developed localized editorial playbooks and trained regional comms directors across 4 languages.",
+        result: "Unified digital presence across 20,000+ enterprise clients worldwide; strategy was documented & published as an industry benchmark case study.",
         slideTitle: "CEMEX Global-to-Local Social Strategy Framework",
         slideImg: "images/slide-cemex.png"
       },
@@ -865,8 +840,8 @@
         category: "CASE STUDY 03 // EDITORIAL GOVERNANCE & OPERATIONS",
         title: "Editorial Committee & Content Infrastructure",
         org: "Page Society",
-        context: "Decentralized subject matter experts across the organization meant content pipelines stalled and the executive market voice grew inconsistent.",
-        contribution: "Built and chaired a cross-functional editorial committee, recording SME sessions and using AI-assisted workflows to generate standardized drafts in brand voice.",
+        context: "Recognized that fragmented subject matter expertise was causing content bottlenecks, inconsistent market voice, and underutilized executive insights.",
+        contribution: "Conceived and chaired an enterprise-wide Editorial Committee. Designed AI-assisted SME intake pipelines to convert interviews into standardized publication assets.",
         result: "Aligned every stakeholder group and maintained quality and cadence across a 100+ annual content output—newsletters, blogs, podcasts and research.",
         slideTitle: "Editorial Governance & Content Pipeline Framework",
         slideImg: "images/slide-editorial.png"
@@ -875,9 +850,9 @@
         category: "CASE STUDY 04 // BENCHMARKING & THOUGHT LEADERSHIP",
         title: "Page Navigator: Benchmarking Survey & Executive Reports",
         org: "Page Society",
-        context: "Fortune 500 CCOs needed actionable benchmarks on rapid corporate shifts; traditional market data was too slow or dense for executive decision-making.",
-        contribution: "Designed survey instruments, chaired insight committees and orchestrated a multi-channel global rollout and executive email campaign.",
-        result: "Converted raw input into primary insights for 1,400 executive members reached, exceeding targets with a 75%+ member download rate.",
+        context: "Surfaced an unaddressed C-suite need for rapid corporate benchmarking during market volatility, bypassing traditional slow research agencies.",
+        contribution: "Pioneered the Page Navigator benchmarking framework. Designed survey instruments, chaired insight committees, and directed global multi-channel rollouts.",
+        result: "Delivered primary strategic intelligence to 1,400+ CCOs and CMOs, achieving an unprecedented 75%+ member download rate.",
         slideTitle: "Page Navigator Survey Instrument & Executive Report",
         slideImg: "images/slide-benchmarking.png"
       },
@@ -885,9 +860,9 @@
         category: "CASE STUDY 05 // MULTIMEDIA & AUDIO PRODUCTION",
         title: 'Enterprise Podcast ("The New CCO") & Independent Series',
         org: "Page Society / Independent",
-        context: "Required interactive audio platforms to highlight complex industry insights without external agency budgets, building warm executive engagement.",
-        contribution: "Managed tip-to-tail production across both enterprise (The New CCO) and independent podcast series (The People You Meet in Old Town): recorded, edited and directed analytics.",
-        result: "Delivered 12 strategic episodes annually at zero external agency cost, cultivating an active listener and member pipeline.",
+        context: "Identified a gap in warm executive engagement and multimedia thought leadership that traditional written reports could not replicate.",
+        contribution: "Architected end-to-end audio strategy for enterprise (The New CCO) and independent series (The People You Meet in Old Town), defining positioning and in-house pipelines.",
+        result: "Delivered 12 strategic episodes annually at zero external agency cost, cultivating an active listener and executive member pipeline.",
         slideTitle: "Podcast Audio Pipeline & Listener Analytics",
         slideImg: "images/slide-podcasts.png"
       }
